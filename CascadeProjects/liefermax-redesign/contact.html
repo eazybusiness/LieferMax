@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - LieferMax</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .input-focus:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-3xl font-bold gradient-text">LieferMax</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-purple-600 font-medium transition">Home</a>
+                        <a href="services.html" class="text-gray-600 hover:text-purple-600 font-medium transition">Services</a>
+                        <a href="contact.html" class="text-gray-900 hover:text-purple-600 font-medium transition">Kontakt</a>
+                        <button class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:opacity-90 transition">
+                            Jetzt bestellen
+                        </button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-purple-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Kontaktieren Sie uns</h1>
+            <p class="text-xl text-purple-100 max-w-3xl mx-auto">
+                Wir sind für Sie da! Schreiben Sie uns oder rufen Sie an – unser Team hilft Ihnen gerne weiter.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 px-4 -mt-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Nachricht senden</h2>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Vorname</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Max">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Nachname</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Mustermann">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">E-Mail</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="max@beispiel.de">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Telefon</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="+49 123 456789">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Betreff</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition">
+                                <option>Allgemeine Anfrage</option>
+                                <option>Support</option>
+                                <option>Business Anfrage</option>
+                                <option>Partnerschaft</option>
+                                <option>Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Nachricht</label>
+                            <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Ihre Nachricht..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full gradient-bg text-white py-4 rounded-full font-bold text-lg hover:opacity-90 transition transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>Nachricht senden
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    
+                    <!-- Contact Cards -->
+                    <div class="card-hover bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Telefon</h3>
+                                <p class="text-gray-600 mb-2">Rufen Sie uns an – wir sind 24/7 für Sie da</p>
+                                <a href="tel:+4912345678" class="text-purple-600 font-semibold text-lg hover:text-purple-700">
+                                    +49 (0) 123 456 789
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">E-Mail</h3>
+                                <p class="text-gray-600 mb-2">Schreiben Sie uns – wir antworten innerhalb von 24h</p>
+                                <a href="mailto:info@liefermax.com" class="text-purple-600 font-semibold text-lg hover:text-purple-700">
+                                    info@liefermax.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Adresse</h3>
+                                <p class="text-gray-600 mb-2">Besuchen Sie uns in unserem Hauptbüro</p>
+                                <p class="text-gray-700 font-semibold">
+                                    Musterstraße 123<br>
+                                    12345 Berlin, Deutschland
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Öffnungszeiten</h3>
+                                <p class="text-gray-600 mb-3">Unser Service ist rund um die Uhr verfügbar</p>
+                                <div class="space-y-1 text-gray-700">
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Lieferservice:</span>
+                                        <span>24/7</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Kundenservice:</span>
+                                        <span>24/7</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Büro:</span>
+                                        <span>Mo-Fr 9-18 Uhr</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl shadow-lg p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">Folgen Sie uns</h3>
+                        <p class="mb-6">Bleiben Sie auf dem Laufenden mit unseren neuesten Updates</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-facebook text-2xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-youtube text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Finden Sie uns</h2>
+                <p class="text-xl text-gray-600">Unser Hauptsitz in Berlin</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl h-96 bg-gray-200 flex items-center justify-center">
+                <div class="text-center">
+                    <i class="fas fa-map-marked-alt text-6xl text-purple-600 mb-4"></i>
+                    <p class="text-gray-600 text-lg">Interactive Map Placeholder</p>
+                    <p class="text-gray-500">Musterstraße 123, 12345 Berlin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Häufig gestellte Fragen</h2>
+                <p class="text-xl text-gray-600">Schnelle Antworten auf Ihre Fragen</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-purple-600 mr-3"></i>
+                        Wie schnell wird geliefert?
+                    </h3>
+                    <p class="text-gray-600 ml-9">
+                        Unsere Express-Lieferung erfolgt in 15-30 Minuten. Standard-Lieferungen innerhalb von 60 Minuten.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-purple-600 mr-3"></i>
+                        Welche Zahlungsmethoden akzeptieren Sie?
+                    </h3>
+                    <p class="text-gray-600 ml-9">
+                        Wir akzeptieren Kreditkarten, PayPal, Apple Pay, Google Pay und Barzahlung bei Lieferung.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-purple-600 mr-3"></i>
+                        Gibt es Mindestbestellwerte?
+                    </h3>
+                    <p class="text-gray-600 ml-9">
+                        Nein, es gibt keinen Mindestbestellwert. Sie können jederzeit bestellen, was Sie möchten.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-purple-600 mr-3"></i>
+                        Kann ich meine Bestellung verfolgen?
+                    </h3>
+                    <p class="text-gray-600 ml-9">
+                        Ja! Mit unserem Live-GPS-Tracking können Sie Ihre Lieferung in Echtzeit verfolgen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">LieferMax</h3>
+                    <p class="text-gray-400">
+                        Ihr zuverlässiger Partner für schnelle und sichere Lieferungen.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Unternehmen</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition">Über uns</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Karriere</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Presse</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Service</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-purple-400 transition">Unsere Services</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Preise</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-purple-400 transition">Kontaktieren Sie uns</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Support</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Partnerschaften</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2024 LieferMax. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-facebook text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
