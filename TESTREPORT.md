@@ -124,19 +124,45 @@
 
 ---
 
-## ✅ Korrigierte Fehler
+## ✅ Korrigierte Fehler (4. Februar 2026)
 
 ### OSM-Karte korrigiert
-
 **Datei:** `contact.html`
+- Latitude: 47.5605 → 47.6537
+- Longitude: 10.6900 → 10.7156
 
-**Vorher (falsche Koordinaten):**
-- Latitude: 47.5605
-- Longitude: 10.6900
+### FAQ-Bereich entfernt
+**Datei:** `contact.html`
+- Falscher Mockup-Content für Essenslieferung entfernt
+- Original-Website hat keinen FAQ-Bereich
 
-**Nachher (korrekte Koordinaten für "An der Leiten 4, 87672 Roßhaupten"):**
-- Latitude: 47.6537
-- Longitude: 10.7156
+### Navigation korrigiert
+**Datei:** `contact.html`
+- Link zu nicht existierender `services.html` entfernt
+- Korrekte Navigation: Home, Produkte, COPA Integration, Kontakt
+
+### Button korrigiert
+**Datei:** `contact.html`
+- "Jetzt bestellen" → "Demo anfragen"
+
+### Farbschema angeglichen
+**Datei:** `contact.html`
+- Lila (#667eea, #764ba2) → Blau (#0066FF, #00C9FF)
+- Konsistent mit allen anderen Seiten
+
+### Kassen-Konverter hinzugefügt
+**Datei:** `products.html`
+- Neue Sektion mit Original-Content von liefermax.com
+- "Sie wollen Ihre Getränke-Markt-Kasse günstig mit COPA SYSTEME verbinden?"
+
+### Mobile Menü implementiert
+**Alle Seiten**
+- Hamburger-Menü jetzt funktional
+- JavaScript in `assets/js/main.js`
+
+### Demo-Buttons verlinkt
+**Alle Seiten**
+- Alle "Demo anfragen" Buttons verlinken jetzt auf `contact.html`
 
 ---
 
@@ -224,14 +250,14 @@
 
 ## 📝 Checkliste vor Kundenübergabe
 
-- [ ] FAQ-Bereich auf contact.html überarbeiten
-- [ ] Navigation auf contact.html korrigieren (services.html → products.html)
-- [ ] Button "Jetzt bestellen" → "Demo anfragen" ändern
-- [ ] Farbschema auf contact.html angleichen
-- [ ] Mobile Menü JavaScript implementieren
-- [ ] Demo-Buttons verlinken
-- [ ] Kassen-Konverter Sektion auf products.html hinzufügen
-- [ ] Kontaktformular mit PHP verbinden
+- [x] FAQ-Bereich auf contact.html entfernt (kein Original-Content)
+- [x] Navigation auf contact.html korrigiert (services.html → products.html)
+- [x] Button "Jetzt bestellen" → "Demo anfragen" geändert
+- [x] Farbschema auf contact.html angeglichen (lila → blau)
+- [x] Mobile Menü JavaScript implementiert
+- [x] Demo-Buttons verlinkt
+- [x] Kassen-Konverter Sektion auf products.html hinzugefügt
+- [ ] Kontaktformular mit PHP verbinden (Server-seitig)
 - [ ] Favicon hinzufügen
 - [ ] Cookie-Banner implementieren
 
