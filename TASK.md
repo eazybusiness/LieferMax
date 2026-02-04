@@ -50,16 +50,25 @@
 
 ## 🔄 In Progress
 
+### Pre-Customer Review Fixes (Feb 4, 2026)
+- [ ] Fix FAQ section on contact.html (contains wrong mockup data for food delivery instead of B2B software)
+- [ ] Fix navigation on contact.html (links to non-existent services.html)
+- [ ] Change "Jetzt bestellen" button to "Demo anfragen" on contact.html
+- [ ] Align color scheme on contact.html with rest of site (purple → blue)
+- [ ] Add Kassen-Konverter section to products.html
+- [ ] Implement mobile menu JavaScript functionality
+- [ ] Link Demo buttons to contact.html
+
 ### Products Page
-- [ ] Complete `products.html` with all 6 product sections
-  - [ ] LieferMax App section with detailed features
-  - [ ] LieferMax-CHECK section
-  - [ ] LieferMax-MAP section
-  - [ ] Shop-Konverter section with data flow details
-  - [ ] Bestell-Apps section with app store badges
-  - [ ] Kassen-Konverter section
-  - [ ] Navigation and footer
-  - [ ] Responsive design testing
+- [x] Complete `products.html` with all 6 product sections
+  - [x] LieferMax App section with detailed features
+  - [x] LieferMax-CHECK section
+  - [x] LieferMax-MAP section
+  - [x] Shop-Konverter section with data flow details
+  - [x] Bestell-Apps section with app store badges
+  - [ ] Kassen-Konverter section (missing - needs to be added)
+  - [x] Navigation and footer
+  - [x] Responsive design testing
 
 ---
 
@@ -68,20 +77,20 @@
 ### High Priority - Core Pages
 
 #### Integration Page
-- [ ] Create `integration.html` for COPA integration details
-  - [ ] Hero section highlighting COPA partnership
-  - [ ] Integration benefits section
-  - [ ] Technical details (API, data sync, DMS)
-  - [ ] Step-by-step integration flow diagram
-  - [ ] Supported systems (drink.3000, drink.PRO)
-  - [ ] CTA for integration consultation
-  - [ ] Responsive design
+- [x] Create `integration.html` for COPA integration details (Feb 4, 2026)
+  - [x] Hero section highlighting COPA partnership
+  - [x] Integration benefits section
+  - [x] Technical details (API, data sync, DMS)
+  - [x] Step-by-step integration flow diagram
+  - [x] Supported systems (drink.3000, drink.PRO)
+  - [x] CTA for integration consultation
+  - [x] Responsive design
 
 #### Contact Page
-- [ ] Create `contact.html` with contact form
-  - [ ] Contact information display (address, phone, email)
-  - [ ] Contact form with validation
-    - [ ] Fields: Name, Email, Phone, Company, Message
+- [x] Create `contact.html` with contact form (Feb 4, 2026)
+  - [x] Contact information display (address, phone, email)
+  - [x] Contact form with validation
+    - [x] Fields: Name, Email, Phone, Company, Message
     - [ ] Client-side validation (JavaScript)
     - [ ] Honeypot field for spam prevention
   - [ ] Create `assets/php/contact-form.php`
@@ -89,8 +98,9 @@
     - [ ] Input sanitization
     - [ ] Email sending functionality
     - [ ] Success/error response handling
-  - [ ] Optional: Google Maps embed or static map image
-  - [ ] Responsive design
+  - [x] OpenStreetMap embed (corrected coordinates Feb 4, 2026)
+  - [x] Responsive design
+  - [ ] **FIX NEEDED:** FAQ section has wrong content (food delivery instead of B2B software)
 
 ### Medium Priority - Assets & Optimization
 
@@ -161,9 +171,9 @@
 - [ ] Remove unused CSS/JS
 
 #### Additional Pages (Optional)
-- [ ] Create `impressum.html` (legal imprint - required in Germany)
-- [ ] Create `datenschutz.html` (privacy policy - GDPR)
-- [ ] Create `agb.html` (terms and conditions)
+- [x] Create `impressum.html` (legal imprint - required in Germany) (Feb 4, 2026)
+- [x] Create `datenschutz.html` (privacy policy - GDPR) (Feb 4, 2026)
+- [x] Create `agb.html` (terms and conditions) (Feb 4, 2026)
 - [ ] Create 404 error page
 
 ---
@@ -198,7 +208,17 @@
 
 ## 🐛 Known Issues / Bugs
 
-_No known issues at this time._
+### Critical (Feb 4, 2026 - Pre-Customer Review)
+1. **contact.html FAQ section** - Contains wrong mockup data for food delivery service instead of B2B software
+2. **contact.html navigation** - Links to non-existent `services.html`
+3. **contact.html button** - "Jetzt bestellen" should be "Demo anfragen"
+4. **contact.html colors** - Uses purple scheme instead of blue (inconsistent with other pages)
+5. **products.html** - Missing Kassen-Konverter section
+6. **All pages** - Mobile hamburger menu has no JavaScript functionality
+7. **All pages** - Demo buttons not linked to contact page
+
+### Fixed (Feb 4, 2026)
+- ✅ OSM Map on contact.html showed wrong location (corrected coordinates to 47.6537, 10.7156)
 
 ---
 
