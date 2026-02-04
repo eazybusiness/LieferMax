@@ -1,6 +1,14 @@
-# Deployment Guide - LieferMax Redesign
+# LieferMax Website - Deployment Guide
 
-This guide will help you deploy the LieferMax redesign prototype to GitHub Pages.
+This document provides step-by-step instructions for deploying the LieferMax website redesign.
+
+## 🎯 Deployment Strategy
+
+**Two-Phase Approach:**
+1. **Phase 1:** GitHub Pages preview for client approval
+2. **Phase 2:** Strato production deployment after approval
+
+This ensures the client can review and approve the design before replacing the live site.
 
 ## Prerequisites
 

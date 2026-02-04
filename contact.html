@@ -92,22 +92,22 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">Vorname</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Max">
+                                <input type="text" name="firstname" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Ihr Vorname" required>
                             </div>
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">Nachname</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Mustermann">
+                                <input type="text" name="lastname" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Ihr Nachname" required>
                             </div>
                         </div>
                         
                         <div>
                             <label class="block text-gray-700 font-semibold mb-2">E-Mail</label>
-                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="max@beispiel.de">
+                            <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="ihre.email@firma.de" required>
                         </div>
                         
                         <div>
-                            <label class="block text-gray-700 font-semibold mb-2">Telefon</label>
-                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="+49 123 456789">
+                            <label class="block text-gray-700 font-semibold mb-2">Telefon (optional)</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="+49 ...">
                         </div>
                         
                         <div>
@@ -123,7 +123,7 @@
                         
                         <div>
                             <label class="block text-gray-700 font-semibold mb-2">Nachricht</label>
-                            <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Ihre Nachricht..."></textarea>
+                            <textarea name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus transition" placeholder="Wie können wir Ihnen helfen?" required></textarea>
                         </div>
                         
                         <button type="submit" class="w-full gradient-bg text-white py-4 rounded-full font-bold text-lg hover:opacity-90 transition transform hover:scale-105">
@@ -241,13 +241,24 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Finden Sie uns</h2>
-                <p class="text-xl text-gray-600">Unser Hauptsitz in Berlin</p>
+                <p class="text-xl text-gray-600">An der Leiten 4, 87672 Roßhaupten</p>
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-2xl h-96 bg-gray-200 flex items-center justify-center">
-                <div class="text-center">
-                    <i class="fas fa-map-marked-alt text-6xl text-purple-600 mb-4"></i>
-                    <p class="text-gray-600 text-lg">Interactive Map Placeholder</p>
-                    <p class="text-gray-500">Musterstraße 123, 12345 Berlin</p>
+            <div class="rounded-2xl overflow-hidden shadow-2xl h-96">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=10.6850%2C47.5580%2C10.6950%2C47.5630&layer=mapnik&marker=47.5605%2C10.6900" 
+                    style="border: 0;"
+                    title="LieferMax GmbH Standort">
+                </iframe>
+                <div class="text-xs text-gray-500 mt-2 text-center">
+                    <a href="https://www.openstreetmap.org/?mlat=47.5605&mlon=10.6900#map=15/47.5605/10.6900" target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+                        Größere Karte anzeigen
+                    </a> | Karte: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" class="text-blue-600 hover:underline">OpenStreetMap</a> Mitwirkende
                 </div>
             </div>
         </div>
@@ -312,41 +323,43 @@
                 <div>
                     <h3 class="text-2xl font-bold gradient-text mb-4">LieferMax</h3>
                     <p class="text-gray-400">
-                        Ihr zuverlässiger Partner für schnelle und sichere Lieferungen.
+                        Digitale Getränkelogistik mit nahtloser COPA-Integration.
                     </p>
+                    <div class="mt-4">
+                        <div class="text-sm text-gray-500 mb-2">An der Leiten 4</div>
+                        <div class="text-sm text-gray-500 mb-2">D-87672 Roßhaupten</div>
+                        <div class="text-sm text-gray-400">Tel.: 08367 – 91 39 187</div>
+                    </div>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Unternehmen</h4>
+                    <h4 class="font-bold mb-4">Rechtliches</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-purple-400 transition">Über uns</a></li>
-                        <li><a href="#" class="hover:text-purple-400 transition">Karriere</a></li>
-                        <li><a href="#" class="hover:text-purple-400 transition">Presse</a></li>
+                        <li><a href="impressum.html" class="hover:text-blue-400 transition">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-blue-400 transition">Datenschutz</a></li>
+                        <li><a href="agb.html" class="hover:text-blue-400 transition">AGB</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Service</h4>
+                    <h4 class="font-bold mb-4">Produkte</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="services.html" class="hover:text-purple-400 transition">Unsere Services</a></li>
-                        <li><a href="#" class="hover:text-purple-400 transition">Preise</a></li>
-                        <li><a href="#" class="hover:text-purple-400 transition">FAQ</a></li>
+                        <li><a href="products.html" class="hover:text-blue-400 transition">Alle Produkte</a></li>
+                        <li><a href="integration.html" class="hover:text-blue-400 transition">COPA Integration</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Kontakt</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="contact.html" class="hover:text-purple-400 transition">Kontaktieren Sie uns</a></li>
-                        <li><a href="#" class="hover:text-purple-400 transition">Support</a></li>
-                        <li><a href="#" class="hover:text-purple-400 transition">Partnerschaften</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition">Kontakt</a></li>
+                        <li><a href="mailto:info@liefermax.com" class="hover:text-blue-400 transition">info@liefermax.com</a></li>
+                        <li><a href="tel:+4983679139187" class="hover:text-blue-400 transition">08367 – 91 39 187</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2024 LieferMax. Alle Rechte vorbehalten.</p>
+                <p class="text-gray-400 mb-4 md:mb-0">© 2026 LieferMax GmbH. Alle Rechte vorbehalten.</p>
                 <div class="flex gap-6">
-                    <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-facebook text-2xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-twitter text-2xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-instagram text-2xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                    <a href="mailto:info@liefermax.com" class="text-gray-400 hover:text-blue-400 transition" title="E-Mail an LieferMax"><i class="fas fa-envelope text-2xl"></i></a>
+                    <a href="tel:+4983679139187" class="text-gray-400 hover:text-blue-400 transition" title="Anrufen"><i class="fas fa-phone text-2xl"></i></a>
                 </div>
             </div>
         </div>
