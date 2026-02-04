@@ -35,3 +35,10 @@ temp/
 # OS files
 Thumbs.db
 .DS_Store
+
+# Sensitive files - credentials and passwords
+.env
+*.env
+Benutzernamen.txt
+credentials.txt
+*.credentials
