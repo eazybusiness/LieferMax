@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestell-App - LieferMax</title>
+    <meta name="description" content="Native iOS und Android Bestell-Apps in Verbindung mit ShopWare und COPA Systemen.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        :root {
+            --primary-red: #D32F2F;
+            --primary-gray: #333333;
+            --secondary-gray: #666666;
+            --light-bg: #F5F5F5;
+            --border: #E0E0E0;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center space-x-3">
+                        <img src="assets/images/logo.jpg" alt="LieferMax Logo" class="h-12 w-12 rounded-lg">
+                        <h1 class="text-3xl font-bold text-gray-800">LieferMax</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition">Home</a>
+                        <a href="products.html" class="text-gray-600 hover:text-red-600 font-medium transition">Produkte</a>
+                        <a href="integration.html" class="text-gray-600 hover:text-red-600 font-medium transition">COPA Integration</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-red-600 font-medium transition">Kontakt</a>
+                        <a href="contact.html" class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                            Demo anfragen
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-red-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 py-4">
+                <div class="flex flex-col space-y-4 px-4">
+                    <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition py-2">Home</a>
+                    <a href="products.html" class="text-gray-600 hover:text-red-600 font-medium transition py-2">Produkte</a>
+                    <a href="integration.html" class="text-gray-600 hover:text-red-600 font-medium transition py-2">COPA Integration</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-red-600 font-medium transition py-2">Kontakt</a>
+                    <a href="contact.html" class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold text-center hover:shadow-lg transition">Demo anfragen</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-black mb-6">Bestell-App</h1>
+            <p class="text-xl text-red-100 max-w-3xl mx-auto">
+                Native iOS und Android Apps für Ihre Kunden – nahtlos verbunden mit ShopWare und COPA Systemen
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                        MOBILE BESTELLUNG
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                        Ihre Kunden bestellen <span class="gradient-text">mobil</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                        Wir bieten native iOS und Android Apps in Verbindung mit ShopWare und drink.3000 & drink.PRO von COPA SYSTEME.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Kostengünstig lassen sich unsere bestehenden Apps auf Ihr Layout umbauen. Teure Programmierungen entfallen somit.
+                    </p>
+                    <div class="bg-red-50 rounded-2xl p-6 mb-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Voraussetzungen</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">ShopWare 5 oder 6</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">COPA SYSTEME Warenwirtschaft (drink.3000 oder drink.PRO)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">Unser Shop-Konverter</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/bestell-app_FZAPPNLetter-1024x763.png" alt="Bestell-App Screenshot" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="mb-20">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Funktionsdetails</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-wifi text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Offline-Fähigkeit</h3>
+                        <p class="text-gray-600 text-sm">Bestellen auch ohne Internetverbindung möglich</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-list text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Listeneingabe</h3>
+                        <p class="text-gray-600 text-sm">+ & - sowie Zifferneingabe für schnelle Bestellung</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-image text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Produktfotos</h3>
+                        <p class="text-gray-600 text-sm">Hochwertige Bilder aller Artikel</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-info-circle text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Detailbeschreibungen</h3>
+                        <p class="text-gray-600 text-sm">Ausführliche Produktinformationen</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-euro-sign text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Kundenpreise</h3>
+                        <p class="text-gray-600 text-sm">Listenpreisanzeige anhand der Kundennummer</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-filter text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Produkt-Attribute</h3>
+                        <p class="text-gray-600 text-sm">Suche und Filter (z.B. weintypische Attribute)</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-bolt text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Schneller Check-Out</h3>
+                        <p class="text-gray-600 text-sm">Ohne AGB-Bestätigung oder Ähnlichem</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-bell text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Push Notifications</h3>
+                        <p class="text-gray-600 text-sm">Benachrichtigungen über Angebote und Updates</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-mobile-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Native Apps</h3>
+                        <p class="text-gray-600 text-sm">iOS und Android - optimale Performance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshots -->
+            <div class="mb-20">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">App-Ansichten</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <a href="assets/images/bestell-app_Bildschirmfoto-2021-02-25-um-13.27.16.png" target="_blank">
+                        <img src="assets/images/bestell-app_Bildschirmfoto-2021-02-25-um-13.27.16.png" alt="Bestell-App Ansicht 1" class="rounded-xl shadow-2xl hover:scale-105 transition cursor-pointer">
+                    </a>
+                    <a href="assets/images/bestell-app_Bildschirmfoto-2021-02-25-um-13.41.06.png" target="_blank">
+                        <img src="assets/images/bestell-app_Bildschirmfoto-2021-02-25-um-13.41.06.png" alt="Bestell-App Ansicht 2" class="rounded-xl shadow-2xl hover:scale-105 transition cursor-pointer">
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center bg-gradient-to-br from-red-50 to-gray-50 rounded-3xl p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Interessiert?</h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch über Ihre mobile Bestell-App.
+                </p>
+                <a href="contact.html" class="inline-flex items-center gap-2 gradient-bg text-white px-8 py-4 rounded-lg font-bold hover:shadow-lg transition">
+                    Jetzt Kontakt aufnehmen <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/images/logo.jpg" alt="LieferMax Logo" class="h-10 w-10 rounded-lg">
+                        <h3 class="text-xl font-bold">LieferMax</h3>
+                    </div>
+                    <p class="text-gray-400">Digitale Lösungen für die Getränkelogistik</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Produkte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="products.html#liefermax" class="hover:text-white transition">LieferMax App</a></li>
+                        <li><a href="products.html#check" class="hover:text-white transition">LieferMax-CHECK</a></li>
+                        <li><a href="products.html#map" class="hover:text-white transition">LieferMax-MAP</a></li>
+                        <li><a href="products.html#shop" class="hover:text-white transition">Shop-Konverter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Unternehmen</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="integration.html" class="hover:text-white transition">COPA Integration</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Kontakt</a></li>
+                        <li><a href="impressum.html" class="hover:text-white transition">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-white transition">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <span>+49 8367 9139187</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@liefermax.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 LieferMax GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

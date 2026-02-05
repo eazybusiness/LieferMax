@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopWare & WooCommerce Integration - LieferMax</title>
+    <meta name="description" content="Moderne Schnittstellen zwischen Ihrem Webshop (ShopWare, WooCommerce) und COPA Systeme.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        :root {
+            --primary-red: #D32F2F;
+            --primary-gray: #333333;
+            --secondary-gray: #666666;
+            --light-bg: #F5F5F5;
+            --border: #E0E0E0;
+        }
+        .gradient-bg { background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%); }
+        .gradient-text {
+            background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center space-x-3">
+                        <img src="assets/images/logo.jpg" alt="LieferMax Logo" class="h-12 w-12 rounded-lg">
+                        <h1 class="text-3xl font-bold text-gray-800">LieferMax</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition">Home</a>
+                        <a href="products.html" class="text-gray-600 hover:text-red-600 font-medium transition">Produkte</a>
+                        <a href="integration.html" class="text-gray-600 hover:text-red-600 font-medium transition">COPA Integration</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-red-600 font-medium transition">Kontakt</a>
+                        <a href="contact.html" class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">Demo anfragen</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-red-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="gradient-bg pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-black mb-6">ShopWare & WooCommerce</h1>
+            <p class="text-xl text-red-100 max-w-3xl mx-auto">Moderne View-basierte Schnittstellen zwischen Ihrem Webshop und COPA Systeme</p>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="flex justify-center items-center gap-12 flex-wrap mb-12">
+                    <img src="assets/images/shop-konverter_shopware.png" alt="ShopWare" class="h-16">
+                    <img src="assets/images/shop-konverter_WordPress-1.png" alt="WooCommerce" class="h-16">
+                    <img src="assets/images/copa_systeme_logo.png" alt="COPA Systeme" class="h-16">
+                </div>
+                <p class="text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                    Wir bieten moderne View-basierte Schnittstellen zwischen Ihrem Webshop und COPA Systeme drink.3000 & drink.PRO.
+                </p>
+            </div>
+
+            <div class="mb-20">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Unterstützte Systeme</h2>
+                <p class="text-xl text-gray-600 text-center mb-12">
+                    Wir unterstützen <strong>ShopWare 5 & 6</strong> sowie <strong>WordPress "WooCommerce"</strong> in Verbindung mit COPA Systeme drink.3000 & drink.PRO.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 mb-20">
+                <div class="bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <i class="fas fa-download text-red-600"></i>
+                        Von COPA zum Shop
+                    </h3>
+                    <p class="text-gray-600 mb-6">Das Schnittstellenprogramm überträgt von COPA nach WordPress (WooCommerce) oder ShopWare 5 diese Stammdaten:</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Artikelstammdaten</h4>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Artikelnummer, Name, Beschreibungen</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Preise (Listenpreise, keine Konditionen)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Produktbilder</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Kategorien & Hierarchien</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Produkteigenschaften</h4>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Bio-Qualität, Regionalität</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Gebinde, Gebindeart, Gebindeinhalt (Liter)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Alkoholgehalt (% Alc), Stammwürze (%)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Nährwerte (Brennwert, Kohlenhydrate, Zucker, Fett, Eiweiß, Salz)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Mineraliengehalt (Natrium, Kalium, Magnesium, Calcium, etc.)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Direktsaft, Fruchtgehalt</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Kundenstammdaten</h4>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Beliebige Kunden oder Kundengruppen aus COPA</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Automatische Anlage im Shop mit Willkommens-Email</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Arbeit mit COPA Kundennummer (wichtig für Heimdienst/Gastro)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Preisanzeige nach Kundengruppen steuerbar</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Weitere Daten</h4>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Liefertage (Tourenverwaltung)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Lagerbestände</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <i class="fas fa-upload text-red-600"></i>
+                        Vom Shop zu COPA
+                    </h3>
+                    <p class="text-gray-600 mb-6">Das Schnittstellenprogramm überträgt von WordPress (WooCommerce) oder ShopWare 5 nach COPA:</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Bestelldaten</h4>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Bestellungen inkl. Shop-Preise</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Kundennummer & Adressdaten</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Telefonnummer</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Fremdbestellnummer des Shops</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Kundentexte & Bemerkungen</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-red-50 rounded-lg p-4 mt-6">
+                            <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-info-circle text-red-600"></i>
+                                Intelligente Kundenzuordnung
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                Erkennt COPA eine Kundennummer, wird der Auftrag auf den COPA-Kunden geschrieben. 
+                                Wird kein Kunde erkannt, wird der Auftrag inkl. Adresse auf eine festgelegte diverse Kundennummer geschrieben.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-red-50 to-gray-50 rounded-3xl p-12 mb-20">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Vorteile der Schnittstelle</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-sync text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Vollständige Artikelpflege in COPA</h3>
+                        <p class="text-gray-600 text-sm">Alle Artikeldaten werden zentral in COPA gepflegt und automatisch synchronisiert</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bolt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Minimaler Shop-Aufwand</h3>
+                        <p class="text-gray-600 text-sm">Anpassungen im Shop-Backend nur für Rabattaktionen nötig</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Keine Doppelpflege</h3>
+                        <p class="text-gray-600 text-sm">Einmalige Datenpflege in COPA - automatische Übertragung zum Shop</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center bg-white rounded-3xl p-12 shadow-lg">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Interessiert an der Shop-Integration?</h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Kontaktieren Sie uns für eine detaillierte Beratung zu Ihrer individuellen Shop-Anbindung.
+                </p>
+                <a href="contact.html" class="inline-flex items-center gap-2 gradient-bg text-white px-8 py-4 rounded-lg font-bold hover:shadow-lg transition">
+                    Jetzt beraten lassen <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/images/logo.jpg" alt="LieferMax Logo" class="h-10 w-10 rounded-lg">
+                        <h3 class="text-xl font-bold">LieferMax</h3>
+                    </div>
+                    <p class="text-gray-400">Digitale Lösungen für die Getränkelogistik</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Produkte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="products.html#liefermax" class="hover:text-white transition">LieferMax App</a></li>
+                        <li><a href="products.html#check" class="hover:text-white transition">LieferMax-CHECK</a></li>
+                        <li><a href="products.html#map" class="hover:text-white transition">LieferMax-MAP</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Unternehmen</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="integration.html" class="hover:text-white transition">COPA Integration</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Kontakt</a></li>
+                        <li><a href="impressum.html" class="hover:text-white transition">Impressum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-phone"></i><span>+49 8367 9139187</span></li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope"></i><span>info@liefermax.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 LieferMax GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

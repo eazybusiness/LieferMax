@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEKOPA Portal - LieferMax</title>
+    <meta name="description" content="GEKOPA - Geschützter Kundenbereich für LieferMax Kunden mit Handbüchern und Downloads.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        :root {
+            --primary-red: #D32F2F;
+            --primary-gray: #333333;
+            --secondary-gray: #666666;
+            --light-bg: #F5F5F5;
+            --border: #E0E0E0;
+        }
+        .gradient-bg { background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%); }
+        .gradient-text {
+            background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center space-x-3">
+                        <img src="assets/images/logo.jpg" alt="LieferMax Logo" class="h-12 w-12 rounded-lg">
+                        <h1 class="text-3xl font-bold text-gray-800">LieferMax</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition">Home</a>
+                        <a href="products.html" class="text-gray-600 hover:text-red-600 font-medium transition">Produkte</a>
+                        <a href="integration.html" class="text-gray-600 hover:text-red-600 font-medium transition">COPA Integration</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-red-600 font-medium transition">Kontakt</a>
+                        <a href="contact.html" class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">Demo anfragen</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-red-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="gradient-bg pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            <img src="assets/images/portal_Gekopa-farbig-933x1024.jpg" alt="GEKOPA Logo" class="h-32 mx-auto mb-6">
+            <h1 class="text-5xl md:text-6xl font-black mb-6">GEKOPA Portal</h1>
+            <p class="text-xl text-red-100 max-w-3xl mx-auto">Geschützter Kundenbereich mit Handbüchern, Downloads und Support-Informationen</p>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-red-50 border-l-4 border-red-600 p-6 mb-12 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Freigegebene iOS Versionen</h2>
+                <div class="space-y-2 text-gray-700">
+                    <p><strong>LieferMax:</strong> iPadOS 16.6 | iPhone iOS 16.6</p>
+                    <p><strong>LM-Check:</strong> iOS 14.4</p>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Handbücher & Downloads</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="#" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-red-600 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-file-pdf text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">LM-Fahrer-Handbuch</h3>
+                                <p class="text-gray-600 text-sm">Vollständige Anleitung für Fahrer</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-red-600 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-file-pdf text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">LM-Admin-Handbuch</h3>
+                                <p class="text-gray-600 text-sm">Administratoren-Dokumentation</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-red-600 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-file-pdf text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">LM-CHECK Handbuch</h3>
+                                <p class="text-gray-600 text-sm">Leergutkontrolle Dokumentation</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-red-600 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-cog text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Konfigurationsanleitung</h3>
+                                <p class="text-gray-600 text-sm">Setup und Einrichtung</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center bg-gradient-to-br from-red-50 to-gray-50 rounded-3xl p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Benötigen Sie Unterstützung?</h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Unser Support-Team steht Ihnen bei Fragen gerne zur Verfügung.</p>
+                <a href="contact.html" class="inline-flex items-center gap-2 gradient-bg text-white px-8 py-4 rounded-lg font-bold hover:shadow-lg transition">
+                    Support kontaktieren <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/images/logo.jpg" alt="LieferMax Logo" class="h-10 w-10 rounded-lg">
+                        <h3 class="text-xl font-bold">LieferMax</h3>
+                    </div>
+                    <p class="text-gray-400">Digitale Lösungen für die Getränkelogistik</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Produkte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="products.html#liefermax" class="hover:text-white transition">LieferMax App</a></li>
+                        <li><a href="products.html#check" class="hover:text-white transition">LieferMax-CHECK</a></li>
+                        <li><a href="products.html#map" class="hover:text-white transition">LieferMax-MAP</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Unternehmen</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="integration.html" class="hover:text-white transition">COPA Integration</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Kontakt</a></li>
+                        <li><a href="impressum.html" class="hover:text-white transition">Impressum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-phone"></i><span>+49 8367 9139187</span></li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope"></i><span>info@liefermax.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 LieferMax GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
