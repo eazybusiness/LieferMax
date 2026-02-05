@@ -1,0 +1,90 @@
+{
+  "total_pages": 17,
+  "pages": [
+    {
+      "id": "2",
+      "title": "Home",
+      "slug": "sample-page"
+    },
+    {
+      "id": "5",
+      "title": "LieferMax-CHECK",
+      "slug": "liefermax-check"
+    },
+    {
+      "id": "78",
+      "title": "LieferMax-MAP",
+      "slug": "liefermax-map"
+    },
+    {
+      "id": "95",
+      "title": "Impressum",
+      "slug": "impressum"
+    },
+    {
+      "id": "100",
+      "title": "Kontakt",
+      "slug": "kontakt"
+    },
+    {
+      "id": "124",
+      "title": "LieferMax",
+      "slug": "liefermax"
+    },
+    {
+      "id": "134",
+      "title": "AGB",
+      "slug": "agb"
+    },
+    {
+      "id": "6348",
+      "title": "Datenschutzerklärung",
+      "slug": "datenschutzerklaerung"
+    },
+    {
+      "id": "6418",
+      "title": "Join Us",
+      "slug": "membership-join"
+    },
+    {
+      "id": "6419",
+      "title": "Registrierung",
+      "slug": "membership-registration"
+    },
+    {
+      "id": "6420",
+      "title": "Login für Mitglieder",
+      "slug": "membership-login"
+    },
+    {
+      "id": "6421",
+      "title": "Profil",
+      "slug": "membership-profile"
+    },
+    {
+      "id": "6422",
+      "title": "Passwort zurücksetzen",
+      "slug": "password-reset"
+    },
+    {
+      "id": "6424",
+      "title": "GEKOPA",
+      "slug": "portal"
+    },
+    {
+      "id": "6468",
+      "title": "ShopWare & WooCommerce",
+      "slug": "weitere-tools"
+    },
+    {
+      "id": "6538",
+      "title": "Bestell App",
+      "slug": "bestell-app"
+    },
+    {
+      "id": "6692",
+      "title": "cam",
+      "slug": "cam"
+    }
+  ]
+}
