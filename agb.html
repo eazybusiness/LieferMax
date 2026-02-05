@@ -10,7 +10,23 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         * { font-family: 'Inter', sans-serif; }
-        .gradient-text { background: linear-gradient(135deg, #0066FF 0%, #00C9FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        
+        :root {
+            --primary-red: #D32F2F;
+            --primary-gray: #333333;
+            --secondary-gray: #666666;
+            --light-bg: #F5F5F5;
+            --border: #E0E0E0;
+        }
+        .gradient-text { background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        
+        :root {
+            --primary-red: #D32F2F;
+            --primary-gray: #333333;
+            --secondary-gray: #666666;
+            --light-bg: #F5F5F5;
+            --border: #E0E0E0;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -21,19 +37,19 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <a href="index.html"><h1 class="text-3xl font-bold gradient-text">LieferMax</h1></a>
+                        <a href="index.html"><div class="flex items-center space-x-3"><img src="assets/images/logo.jpg" alt="LieferMax Logo" class="h-12 w-12 rounded-lg"><h1 class="text-3xl font-bold text-gray-800">LieferMax</h1></div></a>
                     </div>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-8">
-                        <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition">Home</a>
-                        <a href="products.html" class="text-gray-600 hover:text-blue-600 font-medium transition">Produkte</a>
-                        <a href="integration.html" class="text-gray-600 hover:text-blue-600 font-medium transition">COPA Integration</a>
-                        <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium transition">Kontakt</a>
+                        <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition">Home</a>
+                        <a href="products.html" class="text-gray-600 hover:text-red-600 font-medium transition">Produkte</a>
+                        <a href="integration.html" class="text-gray-600 hover:text-red-600 font-medium transition">COPA Integration</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-red-600 font-medium transition">Kontakt</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-red-600">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -41,10 +57,10 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 py-4">
                 <div class="flex flex-col space-y-4 px-4">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition py-2">Home</a>
-                    <a href="products.html" class="text-gray-600 hover:text-blue-600 font-medium transition py-2">Produkte</a>
-                    <a href="integration.html" class="text-gray-600 hover:text-blue-600 font-medium transition py-2">COPA Integration</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium transition py-2">Kontakt</a>
+                    <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition py-2">Home</a>
+                    <a href="products.html" class="text-gray-600 hover:text-red-600 font-medium transition py-2">Produkte</a>
+                    <a href="integration.html" class="text-gray-600 hover:text-red-600 font-medium transition py-2">COPA Integration</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-red-600 font-medium transition py-2">Kontakt</a>
                 </div>
             </div>
         </div>
@@ -55,9 +71,9 @@
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl font-black text-gray-900 mb-8">Allgemeine Geschäftsbedingungen</h1>
             
-            <div class="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200 mb-8">
+            <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-200 mb-8">
                 <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-info text-white text-xl"></i>
                     </div>
                     <div>
@@ -91,19 +107,19 @@
                 </p>
                 <ul class="space-y-2 text-gray-700 ml-6">
                     <li class="flex items-start gap-2">
-                        <span class="text-blue-600 mt-1">•</span>
+                        <span class="text-red-600 mt-1">•</span>
                         <span>Digitale Lieferscheinerstellung</span>
                     </li>
                     <li class="flex items-start gap-2">
-                        <span class="text-blue-600 mt-1">•</span>
+                        <span class="text-red-600 mt-1">•</span>
                         <span>Integration mit COPA Systeme (drink.3000 und drink.PRO)</span>
                     </li>
                     <li class="flex items-start gap-2">
-                        <span class="text-blue-600 mt-1">•</span>
+                        <span class="text-red-600 mt-1">•</span>
                         <span>GPS-Tracking und Tourenplanung</span>
                     </li>
                     <li class="flex items-start gap-2">
-                        <span class="text-blue-600 mt-1">•</span>
+                        <span class="text-red-600 mt-1">•</span>
                         <span>Technischer Support und Updates</span>
                     </li>
                 </ul>
@@ -143,19 +159,19 @@
                 <p class="text-gray-700 mb-4">Der Kunde verpflichtet sich:</p>
                 <ul class="space-y-2 text-gray-700 ml-6">
                     <li class="flex items-start gap-2">
-                        <span class="text-blue-600 mt-1">•</span>
+                        <span class="text-red-600 mt-1">•</span>
                         <span>Die Software nur im Rahmen der vereinbarten Nutzungsrechte zu verwenden</span>
                     </li>
                     <li class="flex items-start gap-2">
-                        <span class="text-blue-600 mt-1">•</span>
+                        <span class="text-red-600 mt-1">•</span>
                         <span>Zugangsdaten vertraulich zu behandeln und vor unbefugtem Zugriff zu schützen</span>
                     </li>
                     <li class="flex items-start gap-2">
-                        <span class="text-blue-600 mt-1">•</span>
+                        <span class="text-red-600 mt-1">•</span>
                         <span>Regelmäßige Datensicherungen durchzuführen</span>
                     </li>
                     <li class="flex items-start gap-2">
-                        <span class="text-blue-600 mt-1">•</span>
+                        <span class="text-red-600 mt-1">•</span>
                         <span>Den Anbieter unverzüglich über Störungen oder Fehler zu informieren</span>
                     </li>
                 </ul>
@@ -186,7 +202,7 @@
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">9. Datenschutz</h2>
                 <p class="text-gray-700 mb-4">
                     Der Anbieter verpflichtet sich, die geltenden datenschutzrechtlichen Bestimmungen einzuhalten. Nähere 
-                    Informationen zum Datenschutz finden Sie in unserer <a href="datenschutz.html" class="text-blue-600 hover:underline">Datenschutzerklärung</a>.
+                    Informationen zum Datenschutz finden Sie in unserer <a href="datenschutz.html" class="text-red-600 hover:underline">Datenschutzerklärung</a>.
                 </p>
             </div>
 
@@ -209,10 +225,10 @@
                     kontaktieren Sie uns bitte direkt.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    <a href="contact.html" class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                         Kontakt aufnehmen
                     </a>
-                    <a href="tel:+4983679139187" class="bg-blue-700 bg-opacity-50 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-70 transition border-2 border-white border-opacity-30">
+                    <a href="tel:+4983679139187" class="bg-red-700 bg-opacity-50 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-70 transition border-2 border-white border-opacity-30">
                         <i class="fas fa-phone mr-2"></i>08367 – 91 39 187
                     </a>
                 </div>
@@ -240,23 +256,23 @@
                 <div>
                     <h4 class="font-bold mb-4">Rechtliches</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="impressum.html" class="hover:text-blue-400 transition">Impressum</a></li>
-                        <li><a href="datenschutz.html" class="hover:text-blue-400 transition">Datenschutz</a></li>
-                        <li><a href="agb.html" class="hover:text-blue-400 transition">AGB</a></li>
+                        <li><a href="impressum.html" class="hover:text-red-400 transition">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-red-400 transition">Datenschutz</a></li>
+                        <li><a href="agb.html" class="hover:text-red-400 transition">AGB</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Produkte</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="products.html" class="hover:text-blue-400 transition">Alle Produkte</a></li>
-                        <li><a href="integration.html" class="hover:text-blue-400 transition">COPA Integration</a></li>
+                        <li><a href="products.html" class="hover:text-red-400 transition">Alle Produkte</a></li>
+                        <li><a href="integration.html" class="hover:text-red-400 transition">COPA Integration</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Kontakt</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="contact.html" class="hover:text-blue-400 transition">Kontaktformular</a></li>
-                        <li><a href="mailto:info@liefermax.com" class="hover:text-blue-400 transition">info@liefermax.com</a></li>
+                        <li><a href="contact.html" class="hover:text-red-400 transition">Kontaktformular</a></li>
+                        <li><a href="mailto:info@liefermax.com" class="hover:text-red-400 transition">info@liefermax.com</a></li>
                     </ul>
                 </div>
             </div>

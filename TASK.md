@@ -50,13 +50,17 @@
 
 ## 🔄 In Progress
 
-### 🚨 PHASE 2: Kundenfeedback umsetzen (Feb 5, 2026)
+### 🚨 PHASE 2: HTML-First Redesign (Feb 5, 2026)
 
-#### Kritisch - Sofort-Maßnahmen:
-- [ ] Logo aus gescrapten Bildern extrahieren und integrieren
-- [ ] Farbpalette aus Logo ableiten (weniger Blau, wärmer)
+#### ✅ Abgeschlossen - Sofort-Maßnahmen:
+- [x] Logo aus client_input extrahiert und integriert (alle Seiten)
+- [x] Farbpalette aus Logo abgeleitet (Rot #D32F2F statt Blau)
+- [x] CSS-Variablen definiert für konsistentes Design
+- [x] Alle Gradients von Blau → Rot/Grau aktualisiert
+
+#### In Arbeit:
 - [ ] Fehlende Screenshots/Bilder auf Produktseiten einbauen
-- [ ] Vollständige Feature-Listen auf products.html ergänzen
+- [ ] Vollständige Feature-Listen auf products.html ergänzen (37 Punkte)
 
 #### CMS-Migration:
 - [ ] Astro-Projekt initialisieren
@@ -72,6 +76,14 @@
 - [ ] LM-MAP: 4 Dashboard-Screenshots
 - [ ] Shop-Konverter: ShopWare/WooCommerce Logos
 - [ ] Bestell-Apps: App-Screenshots
+
+### Logo & Farben Integration (Feb 5, 2026) - COMPLETED
+- [x] Logo in alle HTML-Seiten integriert (7 Seiten)
+- [x] Farbschema von Blau → Rot geändert (alle Seiten)
+- [x] Navigation-Links: hover von blue → red
+- [x] Buttons: gradient-bg von blau → rot
+- [x] Hero-Section: Akzente von blau → rot
+- [x] CSS-Variablen für konsistentes Theming
 
 ### Pre-Customer Review Fixes (Feb 4, 2026) - COMPLETED
 - [x] Fix FAQ section on contact.html - REMOVED (no original content exists)

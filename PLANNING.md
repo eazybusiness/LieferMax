@@ -3,20 +3,24 @@
 ## LieferMax Website Redesign - Project Architecture & Planning
 
 **Project Start Date**: January 2026  
-**Last Updated**: 5. Februar 2026  
-**Project Status**: Phase 2 - CMS Migration & Content Completion  
-**Client**: LieferMax GmbH (via freelancer.de)
+**Last Updated**: 5. Februar 2026 - 12:25 PM  
+**Project Status**: Phase 2 - HTML-First Redesign (Logo + Farben + Content)  
+**Client**: LieferMax GmbH (via freelancer.de)  
+**Strategy**: HTML-First → CMS später
 
 ---
 
 ## 🚨 AKTUELLES KUNDENFEEDBACK (5. Februar 2026)
 
-### Kundenanforderungen:
-1. **Selbst editierbar** - Kunde möchte Inhalte selbst bearbeiten können
-2. **Logo fehlt** - Firmenlogo muss integriert werden
-3. **Farben anpassen** - Farben aus dem Logo übernehmen
-4. **Weniger nüchtern** - Seite wirkt zu unpersönlich, zu viel Blau
-5. **Bilder fehlen** - Original-Screenshots und Produktbilder müssen übernommen werden
+### Kunde sagt:
+> "sieht schon recht gut aus. Es fehlen halt noch unser Logo und bisschen die Farben daraus auf der Seite. Insgesamt sieht mir die Seite sehr unpersönlich und nüchtern aus. Evtl. wegen dem vielen Blau. Auf was baust du auf? Ich hab dann schon ne Umgebung um selbst zu editieren?"
+
+### Prioritäten:
+1. ✅ **Logo integrieren** - `client_input/liefermax-logo-150x150.jpg`
+2. ✅ **Farben anpassen** - Blau → Rot/Grau aus Logo (wärmer, persönlicher)
+3. ✅ **Fehlende Inhalte** - Alle WordPress-Inhalte einbauen
+4. ✅ **Screenshots** - 25+ Produktbilder einbinden
+5. ⚠️ **CMS später** - Erst Design, dann editierbare Lösung
 
 ### Kritische Feststellung:
 - **Content unvollständig**: Viele Original-Seiten wurden nicht vollständig gespiegelt
@@ -57,9 +61,18 @@ Create a modern, professional website redesign for LieferMax - a B2B SaaS platfo
 
 ---
 
-## 🔄 CMS-ENTSCHEIDUNG
+## 🔄 STRATEGIE-ENTSCHEIDUNG: HTML-First
 
-### Empfehlung: **Astro + Decap CMS (ehemals Netlify CMS)**
+### Phase 1: HTML-First Redesign (JETZT - 2-3 Tage)
+**Warum HTML-First?**
+- ✅ **100% automatisierbar** - Kein manueller Aufwand
+- ✅ **Schnell** - 2-3 Tage statt 5-7 Tage
+- ✅ **Flexibel** - Läuft auf jedem Hosting
+- ✅ **Kunde sieht sofort Ergebnisse**
+- ✅ **CMS kann später hinzugefügt werden**
+
+### Phase 2: CMS Integration (SPÄTER - wenn gewünscht)
+**Empfehlung: Decap CMS (Git-basiert)**
 
 #### Warum diese Kombination?
 | Kriterium | Astro + Decap CMS |
@@ -86,25 +99,36 @@ Create a modern, professional website redesign for LieferMax - a B2B SaaS platfo
 
 ---
 
-## 🎨 DESIGN-ANPASSUNGEN
+## 🎨 DESIGN-SYSTEM: Logo-basierte Farben
 
-### Aktuelles Problem:
-- Zu viel Blau (#0066FF, #00C9FF)
-- Wirkt kalt/unpersönlich/nüchtern
-- Logo und Firmenfarben fehlen
+### Logo-Analyse (ABGESCHLOSSEN):
+**Quelle**: `client_input/liefermax-logo-150x150.jpg`
 
-### Lösung:
-1. **Logo analysieren** - Farben extrahieren
-2. **Farbpalette ableiten** - Primär, Sekundär, Akzent aus Logo
-3. **Wärmere Akzente** - Evtl. Orange/Gelb als Akzentfarbe
-4. **Mehr Bilder** - Echte Produktscreenshots, Team-Fotos
-5. **Persönlicher Ton** - Weniger "Enterprise", mehr "Mittelstand"
+**Extrahierte Farben:**
+```css
+:root {
+  /* Hauptfarben aus Logo */
+  --primary-red: #D32F2F;        /* MAX - Rot (Akzent) */
+  --primary-gray: #333333;       /* LIEFER - Dunkelgrau */
+  --secondary-gray: #666666;     /* Mittelgrau */
+  
+  /* Neutral & Warm */
+  --light-bg: #F5F5F5;           /* Hellgrau (warm) */
+  --white: #FFFFFF;
+  --border: #E0E0E0;
+  
+  /* Alte Farben (ERSETZEN) */
+  --old-blue: #0066FF;           /* ❌ Zu kalt */
+  --old-cyan: #00C9FF;           /* ❌ Zu nüchtern */
+}
+```
 
-### Original-Logo Farben (zu analysieren):
-- Aus `scraped-content/images/` Logo extrahieren
-- Primärfarbe bestimmen
-- Sekundärfarbe bestimmen
-- Akzentfarbe bestimmen
+### Design-Prinzipien:
+1. ✅ **Rot als Akzent** - Buttons, Links, Icons (NICHT große Flächen)
+2. ✅ **Grau/Weiß als Basis** - Professionell, schlicht, warm
+3. ✅ **Mehr Bilder** - 25+ Screenshots statt Platzhalter
+4. ✅ **Persönlicher Ton** - Mittelstand, nicht Enterprise
+5. ✅ **Verbesserte Sections** - Z.B. Testimonials als Slider statt chaotisches Grid
 
 ---
 
