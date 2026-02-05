@@ -1,0 +1,281 @@
+{
+  "url": "/?page_id=5",
+  "name": "lm-check",
+  "title": "LieferMax-CHECK - LieferMax GFGH Lieferschein Fahrerverkaufssystem",
+  "metaDescription": "",
+  "ogDescription": "Mit LieferMax-CHECK wird die Leergutkontrolle zum Kinderspiel! Sie können entweder durch Scannen über die iPad Kamera oder händischer Eingabe der Ladescheinnummer, die Tour zur Kontrolle laden. LieferMax-CHECK lädt hierbei nur die Artikel die auf der Tour sein müssten, natürlich ohne Mengenangabe. Durch einfaches Anklicken der Artikel können nacheinander die Mengen eingegeben werden. Der Abgleich erfolgt […]",
+  "h1": [
+    "LieferMax-CHECK"
+  ],
+  "h2": [],
+  "h3": [
+    "Mit LieferMax-CHECK wird die Leergutkontrolle zum Kinderspiel!",
+    "Sie können entweder durch Scannen über die iPad Kamera oder händischer Eingabe der Ladescheinnummer, die Tour zur Kontrolle laden.",
+    "LieferMax-CHECK lädt hierbei nur die Artikel die auf der Tour sein müssten, natürlich ohne Mengenangabe.",
+    "Durch einfaches Anklicken der Artikel können nacheinander die Mengen eingegeben werden.",
+    "Der Abgleich erfolgt anschliessend direkt in drink.3000 bzw. drink.PRO.",
+    "Vorab sendet LieferMax-CHECK eine Bestätigungs-Email mit allen gezählten Positionen und der Meldung, dass abgeglichen werden kann.",
+    "",
+    "",
+    "#bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails {      width: 1254px;              justify-content: center;        margin:0 auto !important;              background-color: rgba(255, 255, 255, 0.00);            padding-left: 4px;      padding-top: 4px;      max-width: 100%;            }        #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item {    justify-content: flex-start;      max-width: 250px;          }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item a {       margin-right: 4px;       margin-bottom: 4px;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item0 {      padding: 0px;            background-color:rgba(255,255,255, 0.30);      border: 0px none #CCCCCC;      opacity: 1.00;      border-radius: 0;      box-shadow: 0px 0px 0px #888888;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item1 img {      max-height: none;      max-width: none;      padding: 0 !important;    }        @media only screen and (min-width: 480px) {      #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item0 {        transition: all 0.3s ease 0s;-webkit-transition: all 0.3s ease 0s;      }      #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item0:hover {        -ms-transform: scale(1.1);        -webkit-transform: scale(1.1);        transform: scale(1.1);      }    }          #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item1 {      padding-top: 56%;    }        #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-title1 {      position: absolute;      top: 0;      z-index: 100;      width: 100%;      height: 100%;      display: flex;      justify-content: center;      align-content: center;      flex-direction: column;      opacity: 0;    }\t      #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-title2,    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-ecommerce2 {      color: #FFFFFF;      font-family: segoe ui;      font-size: 16px;      font-weight: bold;      padding: 2px;      text-shadow: 0px 0px 0px #888888;      max-height: 100%;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-thumb-description span {    color: #323A45;    font-family: Ubuntu;    font-size: 12px;    max-height: 100%;    word-wrap: break-word;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-play-icon2 {      font-size: 32px;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-ecommerce2 {      font-size: 19.2px;      color: #CCCCCC;    }                                                IMG 1213                                                IMG 6060                                                IMG 6068                                                IMG 6070                                                IMG 6061                                                IMG 6065                                                IMG 6064                                                IMG 6063                                                IMG 6062                                                IMG 6067                    /*pagination styles*/      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 {\t\t\t\ttext-align: center;\t\t\t\tfont-size: 12px;\t\t\t\tfont-family: segoe ui;\t\t\t\tfont-weight: bold;\t\t\t\tcolor: #666666;\t\t\t\tmargin: 6px 0 4px;\t\t\t\tdisplay: block;      }      @media only screen and (max-width : 320px) {      #bwg_container1_0 #bwg_container2_0 .displaying-num_0 {     \t display: none;      }      }      #bwg_container1_0 #bwg_container2_0 .displaying-num_0 {\t\t\t\tfont-size: 12px;\t\t\t\tfont-family: segoe ui;\t\t\t\tfont-weight: bold;\t\t\t\tcolor: #666666;\t\t\t\tmargin-right: 10px;\t\t\t\tvertical-align: middle;      }      #bwg_container1_0 #bwg_container2_0 .paging-input_0 {\t\t\t\tfont-size: 12px;\t\t\t\tfont-family: segoe ui;\t\t\t\tfont-weight: bold;\t\t\t\tcolor: #666666;\t\t\t\tvertical-align: middle;      }      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled,      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled:hover,      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled:focus,\t\t\t#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 input.bwg_current_page {\t\t\t\tcursor: default;\t\t\t\tcolor: rgba(102, 102, 102, 0.5);      }      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a,      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 input.bwg_current_page {\t\t\t\tcursor: pointer;\t\t\t\ttext-align: center;\t\t\t\tfont-size: 12px;\t\t\t\tfont-family: segoe ui;\t\t\t\tfont-weight: bold;\t\t\t\tcolor: #666666;\t\t\t\ttext-decoration: none;\t\t\t\tpadding: 3px 6px;\t\t\t\tmargin: 0;\t\t\t\tborder-radius: 0;\t\t\t\tborder-style: solid;\t\t\t\tborder-width: 1px;\t\t\t\tborder-color: #E3E3E3;\t\t\t\t\t\t\t\tbackground-color: rgba(255, 255, 255, 1.00);\t\t\t\tbox-shadow: 0;\t\t\t\ttransition: all 0.3s ease 0s;-webkit-transition: all 0.3s ease 0s;      }                                            if( jQuery('.bwg_nav_cont_0').length > 1 ) {          jQuery('.bwg_nav_cont_0').first().remove()        }        function spider_page_0(cur, x, y, load_more) {          if (typeof load_more == \"undefined\") {            var load_more = false;          }          if (jQuery(cur).hasClass('disabled')) {            return false;          }          var items_county_0 = 1;          switch (y) {            case 1:              if (x >= items_county_0) {                document.getElementById('page_number_0').value = items_county_0;              }              else {                document.getElementById('page_number_0').value = x + 1;              }              break;            case 2:              document.getElementById('page_number_0').value = items_county_0;              break;            case -1:              if (x == 1) {                document.getElementById('page_number_0').value = 1;              }              else {                document.getElementById('page_number_0').value = x - 1;              }              break;            case -2:              document.getElementById('page_number_0').value = 1;              break;\t\t\t\t\t\tcase 0:              document.getElementById('page_number_0').value = x;              break;            default:              document.getElementById('page_number_0').value = 1;          }          bwg_ajax('gal_front_form_0', '0', 'bwg_thumbnails_0', '0', '', 'gallery', 0, '', '', load_more, '', 1);        }                    jQuery('.first-page-0').on('click', function () {              spider_page_0(this, 1, -2, 'numeric');              return false;            });            jQuery('.prev-page-0').on('click', function () {              spider_page_0(this, 1, -1, 'numeric');              return false;            });            jQuery('.next-page-0').on('click', function () {              spider_page_0(this, 1, 1, 'numeric');              return false;            });            jQuery('.last-page-0').on('click', function () {              spider_page_0(this, 1, 2, 'numeric');              return false;            });        \t\t\t\t/* Change page on input enter. */        function bwg_change_page_0( e, that ) {          if (  e.key == 'Enter' ) {            var to_page = parseInt(jQuery(that).val());            var pages_count = jQuery(that).parents(\".pagination-links\").data(\"pages-count\");            var current_url_param = jQuery(that).attr('data-url-info');            if (to_page > pages_count) {              to_page = 1;            }\t \t\t\t\t\t\t\t\t\t\t\t\tspider_page_0(this, to_page, 0, 'numeric');\t\t\t\t\t\t\treturn false;\t\t\t\t\t\t          }          return true;        }        jQuery('.bwg_load_btn_0').on('click', function () {            spider_page_0(this, 1, 1, true);            return false;        });                                              #bwg_container1_0 #bwg_container2_0 #spider_popup_overlay_0 {          background-color: #000000;          opacity: 0.70;          }                                if (document.readyState === 'complete') {        if( typeof bwg_main_ready == 'function' ) {          if ( jQuery(\"#bwg_container1_0\").height() ) {            bwg_main_ready(jQuery(\"#bwg_container1_0\"));          }        }      } else {        document.addEventListener('DOMContentLoaded', function() {          if( typeof bwg_main_ready == 'function' ) {            if ( jQuery(\"#bwg_container1_0\").height() ) {             bwg_main_ready(jQuery(\"#bwg_container1_0\"));            }          }        });      }",
+    "Kontakt:",
+    "Kontakt:"
+  ],
+  "paragraphs": [
+    "[webcam]",
+    "LieferMax GmbH\nAn der Leiten 4\nD-87672 Roßhaupten",
+    "Tel.: 08367 – 91 39 187",
+    "· © 2026 LieferMax GFGH Lieferschein Fahrerverkaufssystem · Powered by  · Entworfen mit dem Customizr-Theme  ·",
+    "Benachrichtigungen"
+  ],
+  "images": [
+    {
+      "src": "https://liefermax.com/wp-content/uploads/2017/06/cropped-trans_wortmarke_icon.png",
+      "alt": "Zurück zur Startseite",
+      "title": "",
+      "width": 1586,
+      "height": 333
+    },
+    {
+      "src": "http://liefermax.com/wp-content/uploads/2017/06/LM-Check_1.png",
+      "alt": "",
+      "title": "",
+      "width": 250,
+      "height": 250
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/2021/02/DSF5555-768x512-1.jpg",
+      "alt": "",
+      "title": "",
+      "width": 768,
+      "height": 512
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/2018/09/IMG_1235-768x1024.png",
+      "alt": "",
+      "title": "",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_1213.png?bwg=1536743877",
+      "alt": "IMG 1213",
+      "title": "IMG 1213",
+      "width": 375,
+      "height": 500
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6060.png",
+      "alt": "IMG 6060",
+      "title": "IMG 6060",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6068.png",
+      "alt": "IMG 6068",
+      "title": "IMG 6068",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6070.jpg",
+      "alt": "IMG 6070",
+      "title": "IMG 6070",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6061.png",
+      "alt": "IMG 6061",
+      "title": "IMG 6061",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6065.png",
+      "alt": "IMG 6065",
+      "title": "IMG 6065",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6064.png",
+      "alt": "IMG 6064",
+      "title": "IMG 6064",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6063.png",
+      "alt": "IMG 6063",
+      "title": "IMG 6063",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6062.png",
+      "alt": "IMG 6062",
+      "title": "IMG 6062",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "src": "https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6067.png",
+      "alt": "IMG 6067",
+      "title": "IMG 6067",
+      "width": 500,
+      "height": 375
+    }
+  ],
+  "links": [
+    {
+      "href": "https://liefermax.com/?page_id=5#content",
+      "text": "Zum Inhalt springen"
+    },
+    {
+      "href": "https://liefermax.com/",
+      "text": ""
+    },
+    {
+      "href": "https://liefermax.com/?page_id=124",
+      "text": "LieferMax"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=5",
+      "text": "LM-CHECK"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=78",
+      "text": "LM-MAP"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=6468",
+      "text": "ShopWare & WooCommerce"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=6538",
+      "text": "Bestell App´s"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=95",
+      "text": "Mehr…"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=100",
+      "text": "Kontakt"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=95",
+      "text": "Impressum"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=134",
+      "text": "AGB"
+    },
+    {
+      "href": "https://liefermax.com/?page_id=6348",
+      "text": "Datenschutzerklärung"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_1213.png?bwg=1536743877",
+      "text": "IMG 1213"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6060.png",
+      "text": "IMG 6060"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6068.png",
+      "text": "IMG 6068"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6070.jpg",
+      "text": "IMG 6070"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6061.png",
+      "text": "IMG 6061"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6065.png",
+      "text": "IMG 6065"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6064.png",
+      "text": "IMG 6064"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6063.png",
+      "text": "IMG 6063"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6062.png",
+      "text": "IMG 6062"
+    },
+    {
+      "href": "https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6067.png",
+      "text": "IMG 6067"
+    },
+    {
+      "href": "http://liefermax.com/?feed=rss",
+      "text": ""
+    },
+    {
+      "href": "javascript:void(0)",
+      "text": ""
+    },
+    {
+      "href": "https://liefermax.com/",
+      "text": "LieferMax GFGH Lieferschein Fahrerverkaufssystem"
+    },
+    {
+      "href": "https://wordpress.org/",
+      "text": ""
+    },
+    {
+      "href": "https://presscustomizr.com/customizr",
+      "text": "Customizr-Theme"
+    },
+    {
+      "href": "",
+      "text": ""
+    },
+    {
+      "href": "javascript:;",
+      "text": ""
+    },
+    {
+      "href": "javascript:;",
+      "text": ""
+    }
+  ],
+  "lists": [
+    {
+      "type": "ul",
+      "items": [
+        "LieferMax",
+        "LM-CHECK",
+        "LM-MAP",
+        "ShopWare & WooCommerce",
+        "Bestell App´s",
+        "Mehr… \n\n\tKontakt\n\tImpressum\n\tAGB\n\tDatenschutzerklärung",
+        "Kontakt",
+        "Impressum",
+        "AGB",
+        "Datenschutzerklärung"
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Kontakt",
+        "Impressum",
+        "AGB",
+        "Datenschutzerklärung"
+      ]
+    }
+  ],
+  "mainContent": "\n\n                    \n                        \n                                                                                    \n                                                                    <article id=\"page-5\" class=\"row-fluid post-5 page type-page status-publish has-post-thumbnail czr-hentry\">\n                                                <header class=\"entry-header\">\n          <h1 class=\"entry-title format-icon\">LieferMax-CHECK</h1><hr class=\"featurette-divider __before_content\">        </header>\n        \n        <div class=\"entry-content\">\n          <h3 class=\"\"><img fetchpriority=\"high\" decoding=\"async\" class=\"wp-image-120 alignright tc-smart-loaded\" src=\"http://liefermax.com/wp-content/uploads/2017/06/LM-Check_1.png\" alt=\"\" width=\"250\" height=\"250\" sizes=\"(max-width: 250px) 100vw, 250px\" srcset=\"https://liefermax.com/wp-content/uploads/2017/06/LM-Check_1.png 1125w, https://liefermax.com/wp-content/uploads/2017/06/LM-Check_1-150x150.png 150w, https://liefermax.com/wp-content/uploads/2017/06/LM-Check_1-300x300.png 300w, https://liefermax.com/wp-content/uploads/2017/06/LM-Check_1-768x768.png 768w, https://liefermax.com/wp-content/uploads/2017/06/LM-Check_1-1024x1024.png 1024w\">Mit LieferMax-CHECK wird die Leergutkontrolle zum Kinderspiel!</h3>\n<h3>Sie können entweder durch Scannen über die iPad Kamera oder händischer Eingabe der Ladescheinnummer, die Tour zur Kontrolle laden.</h3>\n<h3>LieferMax-CHECK lädt hierbei nur die Artikel die auf der Tour sein müssten, natürlich ohne Mengenangabe.</h3>\n<h3>Durch einfaches Anklicken der Artikel können nacheinander die Mengen eingegeben werden.</h3>\n<h3>Der Abgleich erfolgt anschliessend direkt in drink.3000 bzw. drink.PRO.</h3>\n<h3>Vorab sendet LieferMax-CHECK eine Bestätigungs-Email mit allen gezählten Positionen und der Meldung, dass abgeglichen werden kann.</h3>\n<h3 class=\"\"><img decoding=\"async\" class=\"aligncenter wp-image-6532 size-full tc-smart-loaded\" src=\"https://liefermax.com/wp-content/uploads/2021/02/DSF5555-768x512-1.jpg\" alt=\"\" width=\"768\" height=\"512\" sizes=\"(max-width: 768px) 100vw, 768px\" srcset=\"https://liefermax.com/wp-content/uploads/2021/02/DSF5555-768x512-1.jpg 768w, https://liefermax.com/wp-content/uploads/2021/02/DSF5555-768x512-1-300x200.jpg 300w\"></h3>\n<h3 class=\"\"><img decoding=\"async\" class=\"aligncenter wp-image-6357 size-large\" src=\"https://liefermax.com/wp-content/uploads/2018/09/IMG_1235-768x1024.png\" alt=\"\" width=\"768\" height=\"1024\" sizes=\"(max-width: 768px) 100vw, 768px\" srcset=\"https://liefermax.com/wp-content/uploads/2018/09/IMG_1235-768x1024.png 768w, https://liefermax.com/wp-content/uploads/2018/09/IMG_1235-225x300.png 225w, https://liefermax.com/wp-content/uploads/2018/09/IMG_1235.png 1536w\"></h3>\n<h3><style id=\"bwg-style-0\">    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails {      width: 1254px;              justify-content: center;        margin:0 auto !important;              background-color: rgba(255, 255, 255, 0.00);            padding-left: 4px;      padding-top: 4px;      max-width: 100%;            }        #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item {    justify-content: flex-start;      max-width: 250px;          }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item a {       margin-right: 4px;       margin-bottom: 4px;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item0 {      padding: 0px;            background-color:rgba(255,255,255, 0.30);      border: 0px none #CCCCCC;      opacity: 1.00;      border-radius: 0;      box-shadow: 0px 0px 0px #888888;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item1 img {      max-height: none;      max-width: none;      padding: 0 !important;    }        @media only screen and (min-width: 480px) {      #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item0 {        transition: all 0.3s ease 0s;-webkit-transition: all 0.3s ease 0s;      }      #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item0:hover {        -ms-transform: scale(1.1);        -webkit-transform: scale(1.1);        transform: scale(1.1);      }    }          #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item1 {      padding-top: 56%;    }        #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-title1 {      position: absolute;      top: 0;      z-index: 100;      width: 100%;      height: 100%;      display: flex;      justify-content: center;      align-content: center;      flex-direction: column;      opacity: 0;    }\t      #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-title2,    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-ecommerce2 {      color: #FFFFFF;      font-family: segoe ui;      font-size: 16px;      font-weight: bold;      padding: 2px;      text-shadow: 0px 0px 0px #888888;      max-height: 100%;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-thumb-description span {    color: #323A45;    font-family: Ubuntu;    font-size: 12px;    max-height: 100%;    word-wrap: break-word;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-play-icon2 {      font-size: 32px;    }    #bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-ecommerce2 {      font-size: 19.2px;      color: #CCCCCC;    }    </style><div id=\"bwg_container1_0\" class=\"bwg_container bwg_thumbnail bwg_thumbnails \" data-right-click-protection=\"0\" data-bwg=\"0\" data-scroll=\"0\" data-gallery-type=\"thumbnails\" data-gallery-view-type=\"thumbnails\" data-current-url=\"/?page_id=5\" data-lightbox-url=\"https://liefermax.com/wp-admin/admin-ajax.php?action=GalleryBox&amp;current_view=0&amp;gallery_id=1&amp;tag=0&amp;theme_id=1&amp;shortcode_id=2&amp;sort_by=order&amp;order_by=asc&amp;current_url=%2F%3Fpage_id%3D5\" data-gallery-id=\"1\" data-popup-width=\"800\" data-popup-height=\"500\" data-is-album=\"gallery\" data-buttons-position=\"bottom\"><div id=\"bwg_container2_0\"><div id=\"ajax_loading_0\" class=\"bwg_loading_div_1 bwg-hidden\"><div class=\"bwg_loading_div_2\"><div class=\"bwg_loading_div_3\"><div id=\"loading_div_0\" class=\"bwg_spider_ajax_loading\">          </div></div></div></div><form id=\"gal_front_form_0\" class=\"\" method=\"post\" action=\"#\" data-current=\"0\" data-shortcode-id=\"2\" data-gallery-type=\"thumbnails\" data-gallery-id=\"1\" data-tag=\"0\" data-album-id=\"0\" data-theme-id=\"1\" data-ajax-url=\"https://liefermax.com/wp-admin/admin-ajax.php?action=bwg_frontend_data\"><div id=\"bwg_container3_0\" class=\"bwg-background bwg-background-0\"><div data-max-count=\"5\" data-thumbnail-width=\"250\" data-bwg=\"0\" data-gallery-id=\"1\" data-lightbox-url=\"https://liefermax.com/wp-admin/admin-ajax.php?action=GalleryBox&amp;current_view=0&amp;gallery_id=1&amp;tag=0&amp;theme_id=1&amp;shortcode_id=2&amp;sort_by=order&amp;order_by=asc&amp;current_url=%2F%3Fpage_id%3D5\" id=\"bwg_thumbnails_0\" class=\"bwg-container-0 bwg-thumbnails bwg-standard-thumbnails bwg-container bwg-border-box\"><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"11\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_1213.png?bwg=1536743877\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -89.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"11\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_1213.png?bwg=1536743877\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_1213.png?bwg=1536743877\" alt=\"IMG 1213\" title=\"IMG 1213\" style=\"max-width: 100%; height: 307px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 1213</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"3\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6060.png\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"3\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6060.png\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6060.png\" alt=\"IMG 6060\" title=\"IMG 6060\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6060</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"8\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6068.png\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"8\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6068.png\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6068.png\" alt=\"IMG 6068\" title=\"IMG 6068\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6068</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"10\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6070.jpg\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"10\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6070.jpg\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6070.jpg\" alt=\"IMG 6070\" title=\"IMG 6070\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6070</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"6\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6061.png\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"6\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6061.png\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6061.png\" alt=\"IMG 6061\" title=\"IMG 6061\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6061</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"7\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6065.png\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"7\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6065.png\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6065.png\" alt=\"IMG 6065\" title=\"IMG 6065\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6065</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"5\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6064.png\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"5\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6064.png\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6064.png\" alt=\"IMG 6064\" title=\"IMG 6064\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6064</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"4\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6063.png\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"4\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6063.png\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6063.png\" alt=\"IMG 6063\" title=\"IMG 6063\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6063</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"1\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6062.png\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"1\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6062.png\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6062.png\" alt=\"IMG 6062\" title=\"IMG 6062\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6062</div></div></div></div></div></a>              </div><div class=\"bwg-item\" style=\"width: 20%;\">        <a class=\"bwg-a  bwg_lightbox\" data-image-id=\"9\" href=\"https://liefermax.com/wp-content/uploads/photo-gallery/IMG_6067.png\" data-elementor-open-lightbox=\"no\"><div class=\"bwg-item0 \"><div class=\"bwg-item1 \"><div class=\"bwg-item2\" style=\"margin-left: 0px; margin-top: -22.219px;\">              <img decoding=\"async\" class=\"skip-lazy bwg_standart_thumb_img_0 \" data-id=\"9\" data-width=\"\" data-height=\"\" data-src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6067.png\" src=\"https://liefermax.com/wp-content/uploads/photo-gallery/thumb/IMG_6067.png\" alt=\"IMG 6067\" title=\"IMG 6067\" style=\"max-width: 100%; height: 173px;\">            </div><div class=\"\"><div class=\"bwg-title1\"><div class=\"bwg-title2\">IMG 6067</div></div></div></div></div></a>              </div></div><style>      /*pagination styles*/      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 {\t\t\t\ttext-align: center;\t\t\t\tfont-size: 12px;\t\t\t\tfont-family: segoe ui;\t\t\t\tfont-weight: bold;\t\t\t\tcolor: #666666;\t\t\t\tmargin: 6px 0 4px;\t\t\t\tdisplay: block;      }      @media only screen and (max-width : 320px) {      #bwg_container1_0 #bwg_container2_0 .displaying-num_0 {     \t display: none;      }      }      #bwg_container1_0 #bwg_container2_0 .displaying-num_0 {\t\t\t\tfont-size: 12px;\t\t\t\tfont-family: segoe ui;\t\t\t\tfont-weight: bold;\t\t\t\tcolor: #666666;\t\t\t\tmargin-right: 10px;\t\t\t\tvertical-align: middle;      }      #bwg_container1_0 #bwg_container2_0 .paging-input_0 {\t\t\t\tfont-size: 12px;\t\t\t\tfont-family: segoe ui;\t\t\t\tfont-weight: bold;\t\t\t\tcolor: #666666;\t\t\t\tvertical-align: middle;      }      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled,      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled:hover,      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled:focus,\t\t\t#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 input.bwg_current_page {\t\t\t\tcursor: default;\t\t\t\tcolor: rgba(102, 102, 102, 0.5);      }      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a,      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 input.bwg_current_page {\t\t\t\tcursor: pointer;\t\t\t\ttext-align: center;\t\t\t\tfont-size: 12px;\t\t\t\tfont-family: segoe ui;\t\t\t\tfont-weight: bold;\t\t\t\tcolor: #666666;\t\t\t\ttext-decoration: none;\t\t\t\tpadding: 3px 6px;\t\t\t\tmargin: 0;\t\t\t\tborder-radius: 0;\t\t\t\tborder-style: solid;\t\t\t\tborder-width: 1px;\t\t\t\tborder-color: #E3E3E3;\t\t\t\t\t\t\t\tbackground-color: rgba(255, 255, 255, 1.00);\t\t\t\tbox-shadow: 0;\t\t\t\ttransition: all 0.3s ease 0s;-webkit-transition: all 0.3s ease 0s;      }      </style>      <span class=\"bwg_nav_cont_0\"><div class=\"tablenav-pages_0\">                  </div><input type=\"hidden\" id=\"page_number_0\" name=\"page_number_0\" value=\"1\" style=\"\">      <script type=\"text/javascript\">        if( jQuery('.bwg_nav_cont_0').length > 1 ) {          jQuery('.bwg_nav_cont_0').first().remove()        }        function spider_page_0(cur, x, y, load_more) {          if (typeof load_more == \"undefined\") {            var load_more = false;          }          if (jQuery(cur).hasClass('disabled')) {            return false;          }          var items_county_0 = 1;          switch (y) {            case 1:              if (x >= items_county_0) {                document.getElementById('page_number_0').value = items_county_0;              }              else {                document.getElementById('page_number_0').value = x + 1;              }              break;            case 2:              document.getElementById('page_number_0').value = items_county_0;              break;            case -1:              if (x == 1) {                document.getElementById('page_number_0').value = 1;              }              else {                document.getElementById('page_number_0').value = x - 1;              }              break;            case -2:              document.getElementById('page_number_0').value = 1;              break;\t\t\t\t\t\tcase 0:              document.getElementById('page_number_0').value = x;              break;            default:              document.getElementById('page_number_0').value = 1;          }          bwg_ajax('gal_front_form_0', '0', 'bwg_thumbnails_0', '0', '', 'gallery', 0, '', '', load_more, '', 1);        }                    jQuery('.first-page-0').on('click', function () {              spider_page_0(this, 1, -2, 'numeric');              return false;            });            jQuery('.prev-page-0').on('click', function () {              spider_page_0(this, 1, -1, 'numeric');              return false;            });            jQuery('.next-page-0').on('click', function () {              spider_page_0(this, 1, 1, 'numeric');              return false;            });            jQuery('.last-page-0').on('click', function () {              spider_page_0(this, 1, 2, 'numeric');              return false;            });        \t\t\t\t/* Change page on input enter. */        function bwg_change_page_0( e, that ) {          if (  e.key == 'Enter' ) {            var to_page = parseInt(jQuery(that).val());            var pages_count = jQuery(that).parents(\".pagination-links\").data(\"pages-count\");            var current_url_param = jQuery(that).attr('data-url-info');            if (to_page > pages_count) {              to_page = 1;            }\t \t\t\t\t\t\t\t\t\t\t\t\tspider_page_0(this, to_page, 0, 'numeric');\t\t\t\t\t\t\treturn false;\t\t\t\t\t\t          }          return true;        }        jQuery('.bwg_load_btn_0').on('click', function () {            spider_page_0(this, 1, 1, true);            return false;        });      </script>      </span>                </div></form>        <style>          #bwg_container1_0 #bwg_container2_0 #spider_popup_overlay_0 {          background-color: #000000;          opacity: 0.70;          }          </style><div id=\"bwg_spider_popup_loading_0\" class=\"bwg_spider_popup_loading\"></div><div id=\"spider_popup_overlay_0\" class=\"spider_popup_overlay\" onclick=\"spider_destroypopup(1000)\"></div><input type=\"hidden\" id=\"bwg_random_seed_0\" value=\"530697373\" style=\"\">                </div></div><script>      if (document.readyState === 'complete') {        if( typeof bwg_main_ready == 'function' ) {          if ( jQuery(\"#bwg_container1_0\").height() ) {            bwg_main_ready(jQuery(\"#bwg_container1_0\"));          }        }      } else {        document.addEventListener('DOMContentLoaded', function() {          if( typeof bwg_main_ready == 'function' ) {            if ( jQuery(\"#bwg_container1_0\").height() ) {             bwg_main_ready(jQuery(\"#bwg_container1_0\"));            }          }        });      }    </script>    </h3>\n        </div>\n\n                                            </article>\n                                \n                            \n                        \n                    \n                                   <hr class=\"featurette-divider tc-mobile-separator\">\n                ",
+  "bodyText": "Zum Inhalt springen\nLieferMax\nLM-CHECK\nLM-MAP\nShopWare & WooCommerce\nBestell App´s\nMehr… \nLieferMax-CHECK\nMit LieferMax-CHECK wird die Leergutkontrolle zum Kinderspiel!\nSie können entweder durch Scannen über die iPad Kamera oder händischer Eingabe der Ladescheinnummer, die Tour zur Kontrolle laden.\nLieferMax-CHECK lädt hierbei nur die Artikel die auf der Tour sein müssten, natürlich ohne Mengenangabe.\nDurch einfaches Anklicken der Artikel können nacheinander die Mengen eingegeben werden.\nDer Abgleich erfolgt anschliessend direkt in drink.3000 bzw. drink.PRO.\nVorab sendet LieferMax-CHECK eine Bestätigungs-Email mit allen gezählten Positionen und der Meldung, dass abgeglichen werden kann.\nIMG 1213\nIMG 6060\nIMG 6068\nIMG 6070\nIMG 6061\nIMG 6065\nIMG 6064\nIMG 6063\nIMG 6062\nIMG 6067\nKontakt:\nKontakt:\n[webcam]\n\n[webcam]\n\nLieferMax GmbH\nAn der Leiten 4\nD-87672 Roßhaupten\n\nInfo@liefermax.com\n\nTel.: 08367 – 91 39 187\n\n· © 2026 LieferMax GFGH Lieferschein Fahrerverkaufssystem · Powered by  · Entworfen mit dem Customizr-Theme ·"
+}

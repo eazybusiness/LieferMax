@@ -3,43 +3,285 @@
 ## LieferMax Website Redesign - Project Architecture & Planning
 
 **Project Start Date**: January 2026  
-**Project Status**: Active Development  
+**Last Updated**: 5. Februar 2026  
+**Project Status**: Phase 2 - CMS Migration & Content Completion  
 **Client**: LieferMax GmbH (via freelancer.de)
+
+---
+
+## 🚨 AKTUELLES KUNDENFEEDBACK (5. Februar 2026)
+
+### Kundenanforderungen:
+1. **Selbst editierbar** - Kunde möchte Inhalte selbst bearbeiten können
+2. **Logo fehlt** - Firmenlogo muss integriert werden
+3. **Farben anpassen** - Farben aus dem Logo übernehmen
+4. **Weniger nüchtern** - Seite wirkt zu unpersönlich, zu viel Blau
+5. **Bilder fehlen** - Original-Screenshots und Produktbilder müssen übernommen werden
+
+### Kritische Feststellung:
+- **Content unvollständig**: Viele Original-Seiten wurden nicht vollständig gespiegelt
+- **Bilder fehlen**: Screenshots, Produktbilder, Logo nicht übernommen
+- **Feature-Listen fehlen**: Detaillierte Leistungsverzeichnisse nicht übernommen
 
 ---
 
 ## 📋 Project Overview
 
 ### Vision
-Create a modern, professional website redesign for LieferMax - a B2B SaaS platform for beverage logistics. The redesign should compete with large SaaS platforms in terms of design quality while maintaining the authentic content and business focus of the original site.
+Create a modern, professional website redesign for LieferMax - a B2B SaaS platform for beverage logistics. The redesign should:
+- Maintain ALL original content (keine Erfindungen!)
+- Be self-editable by the client (CMS)
+- Use the client's branding (Logo, Farben)
+- Feel warm and personal, not cold/corporate
 
 ### Goals
-- **Primary**: Showcase LieferMax's digital logistics solutions with a premium, enterprise-grade design
-- **Secondary**: Demonstrate web design capabilities to win the freelancer.de project
-- **Tertiary**: Create a maintainable, scalable foundation for future development
+- **Primary**: 1:1 Content-Migration mit modernem Design
+- **Secondary**: CMS für Selbst-Editierung durch Kunden
+- **Tertiary**: Branding-Anpassung (Logo, Farben aus Logo)
 
-### Scope
-- **In Scope**:
-  - Homepage with hero section, product overview, COPA integration highlight, CTA sections
-  - Products page detailing all 6 LieferMax solutions
-  - COPA Integration page explaining the technology partnership
-  - Contact page with PHP contact form
-  - Responsive design (mobile, tablet, desktop)
-  - Modern UI/UX with animations and interactions
-  - Real content from original liefermax.com website
-  - Professional stock photography
-  
-- **Out of Scope**:
-  - Backend/database integration
-  - User authentication/login system
-  - E-commerce functionality
-  - Content Management System (CMS)
-  - Multi-language support (German only)
-  - Blog or news section
+### Scope Update (Phase 2)
+
+#### Jetzt IN Scope:
+- ✅ Content Management System (CMS) - **NEU**
+- ✅ Alle Original-Bilder und Screenshots - **NEU**
+- ✅ Logo-Integration - **NEU**
+- ✅ Farbschema aus Logo ableiten - **NEU**
+- ✅ Vollständige Content-Migration aller Seiten - **NEU**
+- ✅ Wärmeres, persönlicheres Design - **NEU**
+
+#### Out of Scope:
+- Backend/database integration (außer CMS)
+- User authentication/login system
+- E-commerce functionality
+- Multi-language support (German only)
+
+---
+
+## 🔄 CMS-ENTSCHEIDUNG
+
+### Empfehlung: **Astro + Decap CMS (ehemals Netlify CMS)**
+
+#### Warum diese Kombination?
+| Kriterium | Astro + Decap CMS |
+|-----------|-------------------|
+| **AI-Freundlich** | ⭐⭐⭐⭐⭐ Markdown-basiert, strukturiert |
+| **Kunden-Editierbar** | ⭐⭐⭐⭐⭐ Visueller Editor, kein Code nötig |
+| **Hosting** | ⭐⭐⭐⭐⭐ GitHub Pages, Netlify, Vercel (kostenlos) |
+| **Performance** | ⭐⭐⭐⭐⭐ Statische Seiten, blitzschnell |
+| **Lernkurve Kunde** | ⭐⭐⭐⭐ Einfacher als WordPress |
+| **Migrationsaufwand** | ⭐⭐⭐ Mittel (2-3 Wochen) |
+
+#### Alternativen (falls gewünscht):
+1. **Astro + TinaCMS** - Noch einfacherer visueller Editor
+2. **Nuxt.js + Nuxt Content** - Vue-basiert, ähnliche Vorteile
+3. **11ty + Decap CMS** - Minimalistischer, sehr schnell
+
+### CMS-Features für den Kunden:
+- 📝 Visueller Editor (WYSIWYG)
+- 🖼️ Bild-Upload per Drag & Drop
+- 📱 Preview vor Veröffentlichung
+- 🔄 Automatische Deployment bei Änderungen
+- 🔒 Passwortgeschützter Admin-Bereich
+- 📊 Keine Datenbank nötig (Git-basiert)
+
+---
+
+## 🎨 DESIGN-ANPASSUNGEN
+
+### Aktuelles Problem:
+- Zu viel Blau (#0066FF, #00C9FF)
+- Wirkt kalt/unpersönlich/nüchtern
+- Logo und Firmenfarben fehlen
+
+### Lösung:
+1. **Logo analysieren** - Farben extrahieren
+2. **Farbpalette ableiten** - Primär, Sekundär, Akzent aus Logo
+3. **Wärmere Akzente** - Evtl. Orange/Gelb als Akzentfarbe
+4. **Mehr Bilder** - Echte Produktscreenshots, Team-Fotos
+5. **Persönlicher Ton** - Weniger "Enterprise", mehr "Mittelstand"
+
+### Original-Logo Farben (zu analysieren):
+- Aus `scraped-content/images/` Logo extrahieren
+- Primärfarbe bestimmen
+- Sekundärfarbe bestimmen
+- Akzentfarbe bestimmen
+
+---
+
+## 📁 CONTENT-INVENTAR (Original vs. Redesign)
+
+### Gescrapte Seiten (10 Seiten):
+| Original-Seite | Status Redesign | Fehlend |
+|----------------|-----------------|---------|
+| Home | ⚠️ Teilweise | Feature-Boxen, Bilder |
+| LieferMax App (page_id=124) | ⚠️ Teilweise | **Leistungsverzeichnis (17 Punkte)**, **Weitere Funktionen (20 Punkte)**, Screenshots |
+| LM-CHECK (page_id=5) | ⚠️ Teilweise | **Galerie mit 10+ Screenshots**, Beschreibungen |
+| LM-MAP (page_id=78) | ⚠️ Teilweise | **4 Dashboard-Screenshots**, Beschreibungen |
+| Shop-Konverter (page_id=6468) | ⚠️ Teilweise | ShopWare/WooCommerce Logos, Screenshots |
+| Bestell-Apps (page_id=6538) | ⚠️ Teilweise | App-Screenshots, Store-Badges |
+| Kontakt (page_id=100) | ✅ OK | - |
+| Impressum (page_id=95) | ✅ OK | - |
+| AGB (page_id=134) | ✅ OK | - |
+| Datenschutz (page_id=6348) | ✅ OK | - |
+
+### Kritisch fehlender Content:
+
+#### LieferMax App - Leistungsverzeichnis (17 Punkte):
+1. Aufträge via Ladescheinnummer öffnen
+2. Kundenübersicht drucken
+3. Start-Kilometer Eingabe
+4. Sortierte Absatzstätten aus Warenwirtschaft
+5. Fahrer/Beifahrer/Fahrzeug aus Warenwirtschaft
+6. Navigation via Maps
+7. Offene Rechnungen bar kassieren
+8. Abladeliste mit Barcodescanner
+9. Abladeliste drucken
+10. Aufladeliste (Leergut/Vollgut)
+11. Unterschriftspflicht (config-abhängig)
+12. Lieferschein drucken/per E-Mail
+13. Aufträge löschen mit Begründung
+14. Endkilometerstand eingeben
+15. Tagesabschluss erstellen
+16. Leergutkennzeichnung drucken
+17. W-LAN Übertragung an IIS WEB-Server
+
+#### LieferMax App - Weitere Funktionen (20 Punkte):
+1. Seriennummernverwaltung via Scanner
+2. Leer & Vollgut-Scan Funktion
+3. Zu- und Abschläge verrechnen
+4. Kommuliertes Leergut je Kunde
+5. Listung
+6. Zug um Zug
+7. Heimdienstabwicklung
+8. Bargeldberechnung
+9. Offene Postenverwaltung
+10. Rechnung/Lieferschein/Quittung per E-Mail
+11. DMS Archivierung
+12. Bruch: Fotozwang & Archivierung
+13. Kundennotizen
+14. Bewertete Lieferscheine
+15. Neuer Auftrag über Bestandskundenliste
+16. Storno mit Grundangabe
+17. Zeiterfassung
+18. Barkunden Leergutverrechnung
+19. Digitale Belegerstellung
+20. Lieferschein & Rechnungsnachdruck
 
 ---
 
 ## 🏗️ Architecture
+
+### Phase 2: CMS-basierte Architektur
+
+```
+liefermax-cms/
+├── src/
+│   ├── content/           # Markdown Content (CMS-editierbar)
+│   │   ├── produkte/
+│   │   │   ├── liefermax-app.md
+│   │   │   ├── lm-check.md
+│   │   │   ├── lm-map.md
+│   │   │   ├── shop-konverter.md
+│   │   │   ├── bestell-apps.md
+│   │   │   └── kassen-konverter.md
+│   │   ├── pages/
+│   │   │   ├── home.md
+│   │   │   ├── kontakt.md
+│   │   │   ├── impressum.md
+│   │   │   ├── agb.md
+│   │   │   └── datenschutz.md
+│   │   └── config/
+│   │       └── site.json    # Logo, Farben, Kontaktdaten
+│   ├── components/        # Wiederverwendbare UI-Komponenten
+│   ├── layouts/           # Seitenlayouts
+│   └── pages/             # Astro-Seiten
+├── public/
+│   ├── images/            # Alle Original-Bilder
+│   │   ├── logo/
+│   │   ├── screenshots/
+│   │   └── icons/
+│   └── admin/             # Decap CMS Admin
+├── astro.config.mjs
+└── package.json
+```
+
+### Technology Stack (Phase 2)
+
+#### Framework
+- **Astro 4.x**: Static Site Generator mit Content Collections
+- **Decap CMS**: Git-basiertes Headless CMS für Kunden-Editierung
+
+#### Frontend
+- **TailwindCSS**: Utility-first CSS (wie bisher)
+- **TypeScript**: Typsicherheit für Komponenten
+
+#### Hosting
+- **Netlify** (empfohlen): Automatisches Deployment, CMS-Integration
+- **Alternative**: Vercel, GitHub Pages + Netlify Identity
+
+---
+
+## 📅 MIGRATIONS-PLAN
+
+### Phase 2.1: Vorbereitung (1-2 Tage)
+- [ ] Astro-Projekt initialisieren
+- [ ] Decap CMS konfigurieren
+- [ ] Logo analysieren und Farbpalette erstellen
+- [ ] Alle gescrapten Bilder in `/public/images/` kopieren
+
+### Phase 2.2: Content-Migration (3-5 Tage)
+- [ ] Markdown-Dateien für alle Produkte erstellen
+- [ ] Vollständige Feature-Listen übernehmen
+- [ ] Alle Screenshots einbinden
+- [ ] Rechtliche Seiten migrieren
+
+### Phase 2.3: Design-Anpassung (2-3 Tage)
+- [ ] Farbschema aus Logo implementieren
+- [ ] Wärmeres Design umsetzen
+- [ ] Mehr Bilder/Screenshots einbauen
+- [ ] Persönlicheren Ton im Design
+
+### Phase 2.4: CMS-Setup (1-2 Tage)
+- [ ] Decap CMS Admin-Panel einrichten
+- [ ] Content-Schemas definieren
+- [ ] Kunden-Zugang einrichten
+- [ ] Dokumentation für Kunden erstellen
+
+### Phase 2.5: Testing & Deployment (1-2 Tage)
+- [ ] Alle Seiten testen
+- [ ] CMS-Editierung testen
+- [ ] Netlify Deployment
+- [ ] Kunden-Schulung
+
+**Geschätzter Gesamtaufwand: 8-14 Tage**
+
+---
+
+## 🎯 SOFORT-MASSNAHMEN (vor CMS-Migration)
+
+Falls der Kunde schnell Ergebnisse sehen möchte, können wir parallel:
+
+1. **Logo integrieren** - Sofort in aktuelle HTML-Seiten
+2. **Farben anpassen** - Aus Logo ableiten
+3. **Fehlende Bilder** - Screenshots aus Scraping einbauen
+4. **Feature-Listen** - Vollständige Listen auf products.html
+
+Dies kann in 1-2 Tagen erledigt werden, während die CMS-Migration vorbereitet wird.
+
+---
+
+## 📞 OFFENE FRAGEN AN KUNDEN
+
+1. **Logo-Datei**: Können Sie uns das Logo in hoher Auflösung (PNG/SVG) zusenden?
+2. **Farben**: Haben Sie eine Farbpalette oder sollen wir diese aus dem Logo ableiten?
+3. **CMS-Präferenz**: Ist Astro + Decap CMS akzeptabel oder bevorzugen Sie eine andere Lösung?
+4. **Hosting**: Wo soll die Seite gehostet werden? (Netlify empfohlen für CMS)
+5. **Zeitrahmen**: Wie schnell benötigen Sie die editierbare Version?
+6. **Schulung**: Benötigen Sie eine Einführung in das CMS?
+
+---
+
+## 🏗️ Original Architecture (Phase 1 - Referenz)
 
 ### Project Type
 **Static Website** with minimal PHP for contact form functionality

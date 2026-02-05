@@ -2,18 +2,18 @@
 
 ## LieferMax Website Redesign - Task Tracking
 
-**Last Updated**: February 4, 2026  
-**Current Sprint**: Project Setup & Core Pages Development
+**Last Updated**: February 5, 2026  
+**Current Sprint**: Phase 2 - CMS Migration & Content Completion
 
 ---
 
-## 🎯 Current Sprint Goals
+## 🎯 Current Sprint Goals (Phase 2)
 
-1. Complete project documentation and setup
-2. Finish all core HTML pages (products, integration, contact)
-3. Add high-quality images and optimize
-4. Test responsive design across devices
-5. Deploy to GitHub Pages
+1. **CMS-Migration**: Astro + Decap CMS für Kunden-Editierung
+2. **Content-Completion**: Alle fehlenden Inhalte von Original-Website übernehmen
+3. **Branding**: Logo integrieren, Farben aus Logo ableiten
+4. **Design**: Wärmeres, persönlicheres Design (weniger Blau)
+5. **Bilder**: Alle Original-Screenshots und Produktbilder einbauen
 
 ---
 
@@ -49,6 +49,29 @@
 ---
 
 ## 🔄 In Progress
+
+### 🚨 PHASE 2: Kundenfeedback umsetzen (Feb 5, 2026)
+
+#### Kritisch - Sofort-Maßnahmen:
+- [ ] Logo aus gescrapten Bildern extrahieren und integrieren
+- [ ] Farbpalette aus Logo ableiten (weniger Blau, wärmer)
+- [ ] Fehlende Screenshots/Bilder auf Produktseiten einbauen
+- [ ] Vollständige Feature-Listen auf products.html ergänzen
+
+#### CMS-Migration:
+- [ ] Astro-Projekt initialisieren
+- [ ] Decap CMS konfigurieren
+- [ ] Content in Markdown migrieren
+- [ ] Admin-Panel einrichten
+- [ ] Kunden-Dokumentation erstellen
+
+#### Content-Completion (fehlend auf Original):
+- [ ] LieferMax App: Leistungsverzeichnis (17 Punkte)
+- [ ] LieferMax App: Weitere Funktionen (20 Punkte)
+- [ ] LM-CHECK: Galerie mit 10+ Screenshots
+- [ ] LM-MAP: 4 Dashboard-Screenshots
+- [ ] Shop-Konverter: ShopWare/WooCommerce Logos
+- [ ] Bestell-Apps: App-Screenshots
 
 ### Pre-Customer Review Fixes (Feb 4, 2026) - COMPLETED
 - [x] Fix FAQ section on contact.html - REMOVED (no original content exists)
