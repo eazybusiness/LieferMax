@@ -172,14 +172,14 @@
                         </div>
                     </div>
 
-                </div>
-                <div>
-                    <!-- Screenshot Thumbnail -->
+                    <!-- Screenshot Thumbnail - moved here under text -->
                     <div class="mb-8">
-                        <img src="assets/images/liefermax-screenshots/1.png" alt="LieferMax App Screenshot" class="w-full rounded-2xl shadow-2xl cursor-pointer hover:scale-105 transition-transform" onclick="openCarousel(0)">
-                        <p class="text-center text-gray-500 text-sm mt-4">Klicken Sie auf das Bild, um alle Screenshots zu sehen</p>
+                        <img src="assets/images/liefermax-screenshots/1.png" alt="LieferMax App Screenshot" class="w-1/2 rounded-2xl shadow-2xl cursor-pointer hover:scale-105 transition-transform" onclick="openCarousel(0)" loading="lazy">
+                        <p class="text-gray-500 text-sm mt-4">Klicken Sie auf das Bild, um alle Screenshots zu sehen</p>
                     </div>
 
+                </div>
+                <div>
                     <div class="bg-gradient-to-br from-red-500 to-red-400 rounded-3xl p-8 text-white">
                         <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 mb-6">
                             <h3 class="text-2xl font-bold mb-4">Leistungsverzeichnis</h3>
@@ -876,34 +876,36 @@
     </footer>
 
     <!-- Carousel Modal -->
-    <div id="carouselModal" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4">
+    <div id="carouselModal" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-2 sm:p-4">
         <div class="relative max-w-6xl w-full">
-            <!-- Close Button -->
-            <button onclick="closeCarousel()" class="absolute -top-12 right-0 text-white text-4xl hover:text-red-400 transition z-10">&times;</button>
+            <!-- Close Button - Improved with visible background -->
+            <button onclick="closeCarousel()" class="absolute top-2 right-2 sm:-top-12 sm:right-0 bg-red-600 hover:bg-red-700 text-white w-10 h-10 sm:w-auto sm:h-auto sm:bg-transparent rounded-full flex items-center justify-center text-2xl sm:text-4xl transition z-10">
+                <i class="fas fa-times"></i>
+            </button>
             
             <!-- Carousel Container -->
             <div class="relative">
                 <!-- Main Image -->
-                <img id="carouselImage" src="" alt="Screenshot" class="w-full max-h-[85vh] object-contain rounded-lg shadow-2xl">
+                <img id="carouselImage" src="" alt="Screenshot" class="w-full max-h-[70vh] sm:max-h-[85vh] object-contain rounded-lg shadow-2xl">
                 
-                <!-- Previous Button -->
-                <button onclick="previousImage()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-4 rounded-full backdrop-blur-sm transition">
-                    <i class="fas fa-chevron-left text-2xl"></i>
+                <!-- Previous Button - Mobile optimized -->
+                <button onclick="previousImage()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-4 rounded-full backdrop-blur-sm transition">
+                    <i class="fas fa-chevron-left text-lg sm:text-2xl"></i>
                 </button>
                 
-                <!-- Next Button -->
-                <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-4 rounded-full backdrop-blur-sm transition">
-                    <i class="fas fa-chevron-right text-2xl"></i>
+                <!-- Next Button - Mobile optimized -->
+                <button onclick="nextImage()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-4 rounded-full backdrop-blur-sm transition">
+                    <i class="fas fa-chevron-right text-lg sm:text-2xl"></i>
                 </button>
                 
                 <!-- Image Counter -->
-                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full backdrop-blur-sm">
+                <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full backdrop-blur-sm text-sm sm:text-base">
                     <span id="imageCounter">1 / 20</span>
                 </div>
             </div>
             
-            <!-- Thumbnail Strip -->
-            <div class="mt-4 overflow-x-auto">
+            <!-- Thumbnail Strip - Hidden on mobile for better performance -->
+            <div class="mt-4 overflow-x-auto hidden sm:block">
                 <div id="thumbnailStrip" class="flex gap-2 justify-center pb-2">
                     <!-- Thumbnails will be generated by JavaScript -->
                 </div>
@@ -988,10 +990,26 @@
             if (strip.children.length === 0) {
                 screenshots.forEach((src, index) => {
                     const thumb = document.createElement('img');
-                    thumb.src = src;
-                    thumb.className = 'thumbnail w-16 h-16 object-cover rounded cursor-pointer hover:opacity-100 transition';
+                    thumb.dataset.src = src; // Use data-src for lazy loading
+                    thumb.className = 'thumbnail w-16 h-16 object-cover rounded cursor-pointer hover:opacity-100 transition bg-gray-800';
                     thumb.onclick = () => goToImage(index);
                     strip.appendChild(thumb);
+                    
+                    // Lazy load thumbnails
+                    if ('IntersectionObserver' in window) {
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    const img = entry.target;
+                                    img.src = img.dataset.src;
+                                    observer.unobserve(img);
+                                }
+                            });
+                        });
+                        observer.observe(thumb);
+                    } else {
+                        thumb.src = src; // Fallback for older browsers
+                    }
                 });
             }
         }
