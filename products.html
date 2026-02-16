@@ -439,24 +439,12 @@
                     <div class="mt-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Screenshots</h3>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <a href="assets/images/lm-check_IMG_6060.png" target="_blank" class="block">
-                                <img src="assets/images/lm-check_IMG_6060.png" alt="LM-CHECK Screenshot 1" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
-                            </a>
-                            <a href="assets/images/lm-check_IMG_6061.png" target="_blank" class="block">
-                                <img src="assets/images/lm-check_IMG_6061.png" alt="LM-CHECK Screenshot 2" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
-                            </a>
-                            <a href="assets/images/lm-check_IMG_6062.png" target="_blank" class="block">
-                                <img src="assets/images/lm-check_IMG_6062.png" alt="LM-CHECK Screenshot 3" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
-                            </a>
-                            <a href="assets/images/lm-check_IMG_6063.png" target="_blank" class="block">
-                                <img src="assets/images/lm-check_IMG_6063.png" alt="LM-CHECK Screenshot 4" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
-                            </a>
-                            <a href="assets/images/lm-check_IMG_6064.png" target="_blank" class="block">
-                                <img src="assets/images/lm-check_IMG_6064.png" alt="LM-CHECK Screenshot 5" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
-                            </a>
-                            <a href="assets/images/lm-check_IMG_6065.png" target="_blank" class="block">
-                                <img src="assets/images/lm-check_IMG_6065.png" alt="LM-CHECK Screenshot 6" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
-                            </a>
+                            <img src="assets/images/lm-check_IMG_6060.png" alt="LM-CHECK Screenshot 1" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover" onclick="openCheckCarousel(0)">
+                            <img src="assets/images/lm-check_IMG_6061.png" alt="LM-CHECK Screenshot 2" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover" onclick="openCheckCarousel(1)">
+                            <img src="assets/images/lm-check_IMG_6062.png" alt="LM-CHECK Screenshot 3" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover" onclick="openCheckCarousel(2)">
+                            <img src="assets/images/lm-check_IMG_6063.png" alt="LM-CHECK Screenshot 4" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover" onclick="openCheckCarousel(3)">
+                            <img src="assets/images/lm-check_IMG_6064.png" alt="LM-CHECK Screenshot 5" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover" onclick="openCheckCarousel(4)">
+                            <img src="assets/images/lm-check_IMG_6065.png" alt="LM-CHECK Screenshot 6" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover" onclick="openCheckCarousel(5)">
                         </div>
                     </div>
                 </div>
@@ -513,16 +501,10 @@
                 <div>
                     <!-- Dashboard Screenshots -->
                     <div class="space-y-4">
-                        <a href="assets/images/lm-map_LieferMax-Map-Dashboard-1024x487.png" target="_blank" class="block">
-                            <img src="assets/images/lm-map_LieferMax-Map-Dashboard-1024x487.png" alt="LM-MAP Dashboard" class="rounded-xl shadow-2xl hover:scale-105 transition cursor-pointer w-full">
-                        </a>
+                        <img src="assets/images/lm-map_LieferMax-Map-Dashboard-1024x487.png" alt="LM-MAP Dashboard" class="rounded-xl shadow-2xl hover:scale-105 transition cursor-pointer w-full" onclick="openImageModal('assets/images/lm-map_LieferMax-Map-Dashboard-1024x487.png')">
                         <div class="grid grid-cols-2 gap-4">
-                            <a href="assets/images/lm-map_LieferMax-Map-1-1024x541.png" target="_blank" class="block">
-                                <img src="assets/images/lm-map_LieferMax-Map-1-1024x541.png" alt="LM-MAP Ansicht 1" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-64 object-cover">
-                            </a>
-                            <a href="assets/images/lm-map_LieferMax-Map-2-1024x731.png" target="_blank" class="block">
-                                <img src="assets/images/lm-map_LieferMax-Map-2-1024x731.png" alt="LM-MAP Ansicht 2" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-64 object-cover">
-                            </a>
+                            <img src="assets/images/lm-map_LieferMax-Map-1-1024x541.png" alt="LM-MAP Ansicht 1" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-64 object-cover" onclick="openImageModal('assets/images/lm-map_LieferMax-Map-1-1024x541.png')">
+                            <img src="assets/images/lm-map_LieferMax-Map-2-1024x731.png" alt="LM-MAP Ansicht 2" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-64 object-cover" onclick="openImageModal('assets/images/lm-map_LieferMax-Map-2-1024x731.png')">
                         </div>
                     </div>
                 </div>
@@ -885,17 +867,17 @@
     </footer>
 
     <!-- Carousel Modal -->
-    <div id="carouselModal" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-2 sm:p-4">
-        <div class="relative max-w-6xl w-full">
-            <!-- Close Button - Improved with visible background -->
-            <button onclick="closeCarousel()" class="absolute top-2 right-2 sm:-top-12 sm:right-0 bg-red-600 hover:bg-red-700 text-white w-10 h-10 sm:w-auto sm:h-auto sm:bg-transparent rounded-full flex items-center justify-center text-2xl sm:text-4xl transition z-10">
+    <div id="carouselModal" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4 sm:p-8">
+        <div class="relative max-w-4xl w-full">
+            <!-- Close Button - Always visible inside modal -->
+            <button onclick="closeCarousel()" class="absolute -top-3 -right-3 sm:top-0 sm:right-0 bg-red-600 hover:bg-red-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl transition z-10 shadow-lg">
                 <i class="fas fa-times"></i>
             </button>
             
             <!-- Carousel Container -->
-            <div class="relative">
+            <div class="relative mt-8">
                 <!-- Main Image -->
-                <img id="carouselImage" src="" alt="Screenshot" class="w-full max-h-[70vh] sm:max-h-[85vh] object-contain rounded-lg shadow-2xl">
+                <img id="carouselImage" src="" alt="Screenshot" class="w-full max-h-[60vh] sm:max-h-[70vh] object-contain rounded-lg shadow-2xl">
                 
                 <!-- Previous Button - Mobile optimized -->
                 <button onclick="previousImage()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-4 rounded-full backdrop-blur-sm transition">
@@ -919,6 +901,40 @@
                     <!-- Thumbnails will be generated by JavaScript -->
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- CHECK Carousel Modal -->
+    <div id="checkCarouselModal" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4 sm:p-8">
+        <div class="relative max-w-4xl w-full">
+            <button onclick="closeCheckCarousel()" class="absolute -top-3 -right-3 sm:top-0 sm:right-0 bg-red-600 hover:bg-red-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl transition z-10 shadow-lg">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="relative mt-8">
+                <img id="checkCarouselImage" src="" alt="Screenshot" class="w-full max-h-[60vh] sm:max-h-[70vh] object-contain rounded-lg shadow-2xl">
+                <button onclick="previousCheckImage()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-4 rounded-full backdrop-blur-sm transition">
+                    <i class="fas fa-chevron-left text-lg sm:text-2xl"></i>
+                </button>
+                <button onclick="nextCheckImage()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-4 rounded-full backdrop-blur-sm transition">
+                    <i class="fas fa-chevron-right text-lg sm:text-2xl"></i>
+                </button>
+                <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full backdrop-blur-sm text-sm sm:text-base">
+                    <span id="checkImageCounter">1 / 6</span>
+                </div>
+            </div>
+            <div class="mt-4 overflow-x-auto hidden sm:block">
+                <div id="checkThumbnailStrip" class="flex gap-2 justify-center pb-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Image Modal (for MAP) -->
+    <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4 sm:p-8" onclick="closeImageModal()">
+        <div class="relative max-w-6xl max-h-full">
+            <button onclick="closeImageModal()" class="absolute -top-3 -right-3 sm:top-0 sm:right-0 bg-red-600 hover:bg-red-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl transition z-10 shadow-lg">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="" alt="Screenshot" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl mt-8">
         </div>
     </div>
 
@@ -1025,12 +1041,116 @@
         
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
-            if (document.getElementById('carouselModal').classList.contains('hidden')) return;
-            
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') previousImage();
-            if (e.key === 'Escape') closeCarousel();
+            if (!document.getElementById('carouselModal').classList.contains('hidden')) {
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') previousImage();
+                if (e.key === 'Escape') closeCarousel();
+            }
+            if (!document.getElementById('checkCarouselModal').classList.contains('hidden')) {
+                if (e.key === 'ArrowRight') nextCheckImage();
+                if (e.key === 'ArrowLeft') previousCheckImage();
+                if (e.key === 'Escape') closeCheckCarousel();
+            }
+            if (!document.getElementById('imageModal').classList.contains('hidden')) {
+                if (e.key === 'Escape') closeImageModal();
+            }
         });
+
+        // CHECK Carousel Functions
+        const checkScreenshots = [
+            'assets/images/lm-check_IMG_6060.png',
+            'assets/images/lm-check_IMG_6061.png',
+            'assets/images/lm-check_IMG_6062.png',
+            'assets/images/lm-check_IMG_6063.png',
+            'assets/images/lm-check_IMG_6064.png',
+            'assets/images/lm-check_IMG_6065.png'
+        ];
+        
+        let currentCheckIndex = 0;
+        
+        function openCheckCarousel(index) {
+            currentCheckIndex = index;
+            document.getElementById('checkCarouselModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            updateCheckCarouselImage();
+            generateCheckThumbnails();
+        }
+        
+        function closeCheckCarousel() {
+            document.getElementById('checkCarouselModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function nextCheckImage() {
+            currentCheckIndex = (currentCheckIndex + 1) % checkScreenshots.length;
+            updateCheckCarouselImage();
+        }
+        
+        function previousCheckImage() {
+            currentCheckIndex = (currentCheckIndex - 1 + checkScreenshots.length) % checkScreenshots.length;
+            updateCheckCarouselImage();
+        }
+        
+        function goToCheckImage(index) {
+            currentCheckIndex = index;
+            updateCheckCarouselImage();
+        }
+        
+        function updateCheckCarouselImage() {
+            document.getElementById('checkCarouselImage').src = checkScreenshots[currentCheckIndex];
+            document.getElementById('checkImageCounter').textContent = `${currentCheckIndex + 1} / ${checkScreenshots.length}`;
+            
+            const thumbnails = document.querySelectorAll('.check-thumbnail');
+            thumbnails.forEach((thumb, index) => {
+                if (index === currentCheckIndex) {
+                    thumb.classList.add('ring-4', 'ring-red-500');
+                    thumb.classList.remove('opacity-50');
+                } else {
+                    thumb.classList.remove('ring-4', 'ring-red-500');
+                    thumb.classList.add('opacity-50');
+                }
+            });
+        }
+        
+        function generateCheckThumbnails() {
+            const strip = document.getElementById('checkThumbnailStrip');
+            if (strip.children.length === 0) {
+                checkScreenshots.forEach((src, index) => {
+                    const thumb = document.createElement('img');
+                    thumb.dataset.src = src;
+                    thumb.className = 'check-thumbnail w-16 h-16 object-cover rounded cursor-pointer hover:opacity-100 transition bg-gray-800';
+                    thumb.onclick = () => goToCheckImage(index);
+                    strip.appendChild(thumb);
+                    
+                    if ('IntersectionObserver' in window) {
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    const img = entry.target;
+                                    img.src = img.dataset.src;
+                                    observer.unobserve(img);
+                                }
+                            });
+                        });
+                        observer.observe(thumb);
+                    } else {
+                        thumb.src = src;
+                    }
+                });
+            }
+        }
+
+        // Simple Image Modal Functions (for MAP)
+        function openImageModal(imageSrc) {
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.getElementById('modalImage').src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
     </script>
 </body>
 </html>
