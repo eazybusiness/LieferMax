@@ -234,10 +234,10 @@
                         <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-red-400 rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
                         <div class="relative bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20 shadow-2xl">
                             <div class="grid grid-cols-2 gap-4">
-                                <img src="assets/images/liefermax1.png" alt="LieferMax Screenshot 1" class="rounded-xl shadow-lg w-full">
-                                <img src="assets/images/liefermax2.png" alt="LieferMax Screenshot 2" class="rounded-xl shadow-lg w-full">
-                                <img src="assets/images/liefermax3.png" alt="LieferMax Screenshot 3" class="rounded-xl shadow-lg w-full">
-                                <img src="assets/images/liefermax4.png" alt="LieferMax Screenshot 4" class="rounded-xl shadow-lg w-full">
+                                <img src="assets/images/liefermax1.png" alt="LieferMax Screenshot 1" class="rounded-xl shadow-lg w-full cursor-pointer hover:scale-105 transition" onclick="openImageModal('assets/images/liefermax1.png')">
+                                <img src="assets/images/liefermax2.png" alt="LieferMax Screenshot 2" class="rounded-xl shadow-lg w-full cursor-pointer hover:scale-105 transition" onclick="openImageModal('assets/images/liefermax2.png')">
+                                <img src="assets/images/liefermax3.png" alt="LieferMax Screenshot 3" class="rounded-xl shadow-lg w-full cursor-pointer hover:scale-105 transition" onclick="openImageModal('assets/images/liefermax3.png')">
+                                <img src="assets/images/liefermax4.png" alt="LieferMax Screenshot 4" class="rounded-xl shadow-lg w-full cursor-pointer hover:scale-105 transition" onclick="openImageModal('assets/images/liefermax4.png')">
                             </div>
                         </div>
                     </div>
@@ -497,6 +497,33 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4" onclick="closeImageModal()">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white text-4xl hover:text-red-400 transition">&times;</button>
+            <img id="modalImage" src="" alt="Screenshot" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl">
+        </div>
+    </div>
+
     <script src="assets/js/main.js"></script>
+    <script>
+        function openImageModal(imageSrc) {
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.getElementById('modalImage').src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+    </script>
 </body>
 </html>
