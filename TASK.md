@@ -2,8 +2,8 @@
 
 ## LieferMax Website Redesign - Task Tracking
 
-**Last Updated**: February 5, 2026  
-**Current Sprint**: Phase 2 - CMS Migration & Content Completion
+**Last Updated**: February 17, 2026  
+**Current Sprint**: Phase 3 - CMS Migration (Astro + Decap CMS)
 
 ---
 
@@ -50,7 +50,40 @@
 
 ## 🔄 In Progress
 
-### 🚨 PHASE 2: HTML-First Redesign (Feb 5, 2026)
+### 🚨 PHASE 3: CMS Migration (Feb 17, 2026)
+
+#### Status:
+- ✅ Astro-Projekt initialisiert
+- ✅ Decap CMS konfiguriert
+- ✅ Komponenten-Struktur erstellt
+- ✅ Content Collections Schema definiert
+- ✅ Hosting-Analyse: Strato + GitHub Actions SFTP ist perfekt
+- [ ] **PRIORITÄT: Admin-Zugang einrichten und testen** (in progress)
+  - [ ] GitHub OAuth App erstellen
+  - [ ] Decap CMS Backend konfigurieren
+  - [ ] Test: Kunde kann Index-Seite editieren
+  - [ ] Test: Änderungen werden committed und deployed
+- [ ] Seiten-Migration (1/7 Seiten) - **NACH erfolgreichem CMS-Test**
+  - [x] index.html → index.astro (11 Bilder) ✅ Feb 17, 2026
+    - ✅ home.md Content-Datei erstellt
+    - ✅ Alle 11 Bilder kopiert und verifiziert
+    - ✅ Hero Section mit 4 Screenshots
+    - ✅ Products Section mit 6 Produkt-Icons
+    - ✅ COPA Integration Section
+    - ✅ CTA Section
+    - ✅ Image Modal Funktionalität
+  - [ ] products.html → products.astro (20 Bilder!)
+  - [ ] integration.html → integration.astro
+  - [ ] contact.html → contact.astro
+  - [ ] agb.html → agb.astro
+  - [ ] datenschutz.html → datenschutz.astro
+  - [ ] impressum.html → impressum.astro
+- [ ] **Pre-Deployment: SFTP Backup der Live-Site erstellen**
+- [ ] **Deployment-Plan mit Kunde abstimmen**
+- [ ] GitHub Actions SFTP Workflow implementieren
+- [ ] Go-Live durchführen
+
+### 🚨 PHASE 2: HTML-First Redesign (Feb 5, 2026) - COMPLETED
 
 #### ✅ Abgeschlossen - Sofort-Maßnahmen:
 - [x] Logo aus client_input extrahiert und integriert (alle Seiten)
@@ -67,9 +100,9 @@
 - [x] Shop-Konverter: Logos eingebaut (ShopWare, WooCommerce, COPA)
 
 #### CMS-Migration:
-- [ ] Astro-Projekt initialisieren
-- [ ] Decap CMS konfigurieren
-- [ ] Content in Markdown migrieren
+- [x] Astro-Projekt initialisieren
+- [x] Decap CMS konfigurieren
+- [ ] Content in Markdown migrieren (in progress)
 - [ ] Admin-Panel einrichten
 - [ ] Kunden-Dokumentation erstellen
 
