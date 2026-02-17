@@ -1,11 +1,60 @@
 ---
-title: "LieferMax - Digitale Getränkelogistik"
-description: "Professionelle Software-Lösungen für den Getränkefachgroßhandel. Digitale Lieferscheine, GPS-Tracking, Shop-Integration und mehr."
-heroTitle: "Digitale Getränkelogistik <br>der nächsten Generation"
-heroSubtitle: "Optimieren Sie Ihre Auslieferung mit LieferMax – der führenden App für Getränkefachgroßhändler"
-heroBadge: "✓ Über 100 zufriedene Kunden"
+title: "LieferMax - Digitale Getränkelogistik | COPA Integration"
+description: "LieferMax optimiert die Getränkelogistik mit digitalen Lieferscheinen, GPS-Tracking und nahtloser COPA-Integration für Getränkefachgroßhandel."
+heroTitle: "Wir optimieren die <span class=\"text-red-400\">Getränke-Logistik!</span>"
+heroSubtitle: "Digitalisieren Sie Ihren Lieferprozess mit LieferMax. Papierlose Lieferscheine, GPS-Tracking und nahtlose Integration mit COPA drink.3000 & drink.PRO."
+heroBadge: "✓ COPA Systeme Technologiepartner"
+heroStats:
+  - label: "Digital"
+    value: "100%"
+  - label: "Native App"
+    value: "iOS"
+screenshots:
+  - image: "/assets/images/liefermax1.png"
+    alt: "LieferMax Screenshot 1"
+  - image: "/assets/images/liefermax2.png"
+    alt: "LieferMax Screenshot 2"
+  - image: "/assets/images/liefermax3.png"
+    alt: "LieferMax Screenshot 3"
+  - image: "/assets/images/liefermax4.png"
+    alt: "LieferMax Screenshot 4"
+products:
+  - title: "LieferMax App"
+    icon: "/assets/images/liefermax-icon-21092015_app-store.png"
+    description: "Digitaler Lieferschein für iPhone & iPad. Kompletter Auslieferungsprozess optimiert gesteuert."
+    link: "/products#liefermax"
+  - title: "LieferMax-CHECK"
+    icon: "/assets/images/LM-Check_1-150x150.png"
+    description: "Leergutkontroll-App. Scannen oder händische Eingabe für perfekte Tourenabgleiche."
+    link: "/products#check"
+  - title: "LieferMax-MAP"
+    icon: "/assets/images/LM-Map.png"
+    description: "GPS-Routing Tool. Alle Fahrzeuge live verfolgen und Lieferzustand auswerten."
+    link: "/products#map"
+  - title: "Shop-Konverter"
+    icon: "/assets/images/shop-converter-150x150.png"
+    description: "ShopWare & WooCommerce Integration. Nahtlose Anbindung an COPA drink.3000 & drink.PRO."
+    link: "/products#shop"
+  - title: "Liefer Apps"
+    icon: "/assets/images/lieferapps-150x150.png"
+    description: "Native iOS & Android Apps. Verbindung mit ShopWare und COPA Systemen."
+    link: "/products#apps"
+  - title: "Kassen-Konverter"
+    icon: "/assets/images/kassenkonverter-150x150.png"
+    description: "Getränke-Markt-Kasse mit COPA verbinden. Artikel und Umsätze synchron halten."
+    link: "/products#kasse"
+copaIntegration:
+  title: "Nahtlose Integration mit <span class=\"gradient-text\">COPA Systeme</span>"
+  description: "LieferMax arbeitet perfekt mit drink.3000 und drink.PRO zusammen. Alle Daten werden automatisch synchronisiert – keine doppelte Datenpflege mehr."
+  features:
+    - title: "Automatische Datenübertragung"
+      description: "Lieferscheine und Rechnungen direkt in Ihr COPA-System"
+    - title: "Keine Rückerfassung nötig"
+      description: "Sparen Sie Zeit und vermeiden Sie Fehler"
+    - title: "DMS Archivierung inklusive"
+      description: "Automatische PDF-Ablage in Ihrem Dokumentenarchiv"
 ---
 
-## Willkommen bei LieferMax
+## Komplette Digitalisierung Ihrer Getränkelogistik
 
-LieferMax revolutioniert die Getränkelogistik mit modernster Technologie und intuitiver Bedienung.
+Von der Tourenplanung bis zur Abrechnung – LieferMax deckt alle Prozesse ab und integriert nahtlos mit COPA Systeme.

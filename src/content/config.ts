@@ -8,6 +8,28 @@ const pagesCollection = defineCollection({
     heroTitle: z.string(),
     heroSubtitle: z.string().optional(),
     heroBadge: z.string().optional(),
+    heroStats: z.array(z.object({
+      label: z.string(),
+      value: z.string(),
+    })).optional(),
+    screenshots: z.array(z.object({
+      image: z.string(),
+      alt: z.string(),
+    })).optional(),
+    products: z.array(z.object({
+      title: z.string(),
+      icon: z.string(),
+      description: z.string(),
+      link: z.string(),
+    })).optional(),
+    copaIntegration: z.object({
+      title: z.string(),
+      description: z.string(),
+      features: z.array(z.object({
+        title: z.string(),
+        description: z.string(),
+      })),
+    }).optional(),
   }),
 });
 
@@ -19,10 +41,10 @@ const productsCollection = defineCollection({
     badge: z.string(),
     badgeColor: z.enum(['red', 'green', 'blue', 'purple', 'orange']),
     logo: z.string().optional(),
-    image: z.string().optional(),
+    image: z.string(),
     features: z.array(z.object({
       text: z.string(),
-    })).optional(),
+    })),
     screenshots: z.array(z.object({
       image: z.string(),
       alt: z.string(),

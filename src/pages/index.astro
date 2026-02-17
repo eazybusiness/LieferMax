@@ -5,83 +5,163 @@ import Footer from '../components/Footer.astro';
 import { getEntry } from 'astro:content';
 
 const homeContent = await getEntry('pages', 'home');
-const { title, description, heroTitle, heroSubtitle, heroBadge } = homeContent.data;
+const { title, description, heroTitle, heroSubtitle, heroBadge, heroStats, screenshots, products, copaIntegration } = homeContent.data;
 ---
 
 <BaseLayout title={title} description={description}>
     <Navigation />
     
     <!-- Hero Section -->
-    <section class="gradient-bg pt-32 pb-20 px-4">
-        <div class="max-w-7xl mx-auto text-center text-white">
-            {heroBadge && (
-                <div class="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-full mb-6 border border-white border-opacity-30">
-                    <span class="text-white text-sm font-semibold">{heroBadge}</span>
+    <section class="hero-pattern pt-32 pb-24 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-white">
+                    {heroBadge && (
+                        <div class="inline-block bg-red-500 bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-red-400 border-opacity-30">
+                            <span class="text-gray-200 text-sm font-semibold">{heroBadge}</span>
+                        </div>
+                    )}
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight" set:html={heroTitle}></h1>
+                    {heroSubtitle && (
+                        <p class="text-xl mb-8 text-gray-100 leading-relaxed">{heroSubtitle}</p>
+                    )}
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <a href="https://apps.apple.com/de/app/liefer-max/id1659712322" target="_blank" class="bg-white text-red-600 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition transform hover:scale-105 inline-block">
+                            <i class="fas fa-download mr-2"></i>App testen
+                        </a>
+                    </div>
+                    {heroStats && (
+                        <div class="grid grid-cols-2 gap-6">
+                            {heroStats.map((stat) => (
+                                <div class="text-center">
+                                    <div class="text-4xl font-black text-red-300 mb-1">{stat.value}</div>
+                                    <div class="text-gray-200 text-sm">{stat.label}</div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
-            )}
-            <h1 class="text-5xl md:text-6xl font-black mb-6" set:html={heroTitle}></h1>
-            {heroSubtitle && (
-                <p class="text-xl text-gray-100 max-w-3xl mx-auto mb-10">{heroSubtitle}</p>
-            )}
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="/contact" class="bg-white text-red-600 px-10 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition transform hover:scale-105">
-                    <i class="fas fa-calendar-check mr-2"></i>Kostenlose Demo
-                </a>
-                <a href="tel:+4983679139187" class="bg-red-700 bg-opacity-50 backdrop-blur-sm text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-opacity-70 transition border-2 border-white border-opacity-30">
-                    <i class="fas fa-phone mr-2"></i>08367 – 91 39 187
-                </a>
+                <div class="relative hidden lg:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-red-400 rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
+                        <div class="relative bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20 shadow-2xl">
+                            {screenshots && (
+                                <div class="grid grid-cols-2 gap-4">
+                                    {screenshots.map((screenshot) => (
+                                        <img 
+                                            src={screenshot.image} 
+                                            alt={screenshot.alt} 
+                                            class="rounded-xl shadow-lg w-full cursor-pointer hover:scale-105 transition" 
+                                            onclick={`openImageModal('${screenshot.image}')`}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-24 px-4 bg-white">
+    <!-- Products Section -->
+    <section class="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                    Warum <span class="gradient-text">LieferMax</span>?
+                <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                    UNSERE LÖSUNGEN
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+                    Komplette Digitalisierung Ihrer <span class="gradient-text">Getränkelogistik</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Modernste Technologie für effiziente Getränkelogistik
+                    Von der Tourenplanung bis zur Abrechnung – LieferMax deckt alle Prozesse ab und integriert nahtlos mit COPA Systeme.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt text-3xl text-red-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mobile First</h3>
-                    <p class="text-gray-600">
-                        Optimiert für iPad und iPhone. Ihre Fahrer haben alle Funktionen direkt auf dem Gerät.
-                    </p>
+            {products && (
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {products.map((product) => (
+                        <a href={product.link} class="card-hover group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-red-500 transition-all">
+                            <img src={product.icon} alt={product.title} class="w-[150px] h-[150px] mb-6 group-hover:scale-110 transition-transform" />
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">{product.title}</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">{product.description}</p>
+                            <div class="flex items-center text-red-600 font-semibold group-hover:gap-2 transition-all">
+                                Mehr erfahren <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </a>
+                    ))}
                 </div>
-
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-sync text-3xl text-green-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">COPA Integration</h3>
-                    <p class="text-gray-600">
-                        Nahtlose Integration mit drink.3000 und drink.PRO. Keine doppelte Datenpflege.
-                    </p>
-                </div>
-
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-file-invoice text-3xl text-blue-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Papierlos</h3>
-                    <p class="text-gray-600">
-                        Digitale Lieferscheine und Rechnungen per E-Mail. Automatische DMS-Archivierung.
-                    </p>
-                </div>
-            </div>
+            )}
         </div>
     </section>
 
+    <!-- COPA Integration Section -->
+    {copaIntegration && (
+        <section class="py-24 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                            TECHNOLOGIEPARTNER
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6" set:html={copaIntegration.title}></h2>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">{copaIntegration.description}</p>
+                        <div class="space-y-4 mb-8">
+                            {copaIntegration.features.map((feature) => (
+                                <div class="flex items-start gap-4">
+                                    <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-check text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-900 mb-1">{feature.title}</div>
+                                        <div class="text-gray-600">{feature.description}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <a href="/integration" class="inline-flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-red-700 transition">
+                            Mehr zur Integration <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-red-200">
+                            <div class="bg-white rounded-2xl p-6 shadow-lg mb-4">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-mobile-alt text-white text-xl"></i>
+                                    </div>
+                                    <div class="font-bold text-gray-900">LieferMax App</div>
+                                </div>
+                                <div class="text-sm text-gray-600">Lieferschein erstellt</div>
+                            </div>
+                            <div class="flex items-center justify-center my-6">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+                                    <div class="w-16 h-1 bg-red-600"></div>
+                                    <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+                                    <div class="w-16 h-1 bg-red-600"></div>
+                                    <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-6 shadow-lg">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-database text-white text-xl"></i>
+                                    </div>
+                                    <div class="font-bold text-gray-900">COPA Systeme</div>
+                                </div>
+                                <div class="text-sm text-gray-600">Automatisch synchronisiert</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )}
+
     <!-- CTA Section -->
-    <section class="py-24 px-4 gradient-bg relative overflow-hidden">
+    <section class="py-24 px-4 gradient-bg-alt relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
         </div>
@@ -96,7 +176,7 @@ const { title, description, heroTitle, heroSubtitle, heroBadge } = homeContent.d
                 <a href="/contact" class="bg-white text-red-600 px-10 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition transform hover:scale-105 inline-block">
                     <i class="fas fa-calendar-check mr-2"></i>Kostenlose Demo
                 </a>
-                <a href="tel:+4983679139187" class="bg-red-700 bg-opacity-50 backdrop-blur-sm text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-opacity-70 transition border-2 border-white border-opacity-30">
+                <a href="/contact" class="bg-red-700 bg-opacity-50 backdrop-blur-sm text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-opacity-70 transition border-2 border-white border-opacity-30">
                     <i class="fas fa-phone mr-2"></i>08367 – 91 39 187
                 </a>
             </div>
@@ -113,5 +193,44 @@ const { title, description, heroTitle, heroSubtitle, heroBadge } = homeContent.d
         </div>
     </section>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4" onclick="closeImageModal()">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white text-4xl hover:text-red-400 transition">&times;</button>
+            <img id="modalImage" src="" alt="Screenshot" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl" />
+        </div>
+    </div>
+
     <Footer />
+
+    <script>
+        function openImageModal(imageSrc: string) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage') as HTMLImageElement;
+            if (modal && modalImage) {
+                modal.classList.remove('hidden');
+                modalImage.src = imageSrc;
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+
+        // Make functions globally available
+        (window as any).openImageModal = openImageModal;
+        (window as any).closeImageModal = closeImageModal;
+    </script>
 </BaseLayout>
