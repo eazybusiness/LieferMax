@@ -1,0 +1,544 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+const pageData = await getEntry('pages', 'products');
+---
+
+<BaseLayout 
+    title={pageData.data.title}
+    description={pageData.data.description}
+>
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-black mb-6">{pageData.data.heroTitle}</h1>
+            <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+                {pageData.data.heroSubtitle}
+            </p>
+        </div>
+    </section>
+
+    <!-- LieferMax App -->
+    <section id="liefermax" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                        HAUPTPRODUKT
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 flex items-center gap-4">
+                        <img src="/assets/images/liefermax-logo.png" alt="LieferMax Logo" class="h-16 w-16 object-contain">
+                        LieferMax <span class="gradient-text">App</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                        LieferMax ist eine Apple App mit der Ihre Lieferfahrer den kompletten Auslieferungsprozess optimiert steuern können. Ihr Tourenablauf wird durch die interne Navigation deutlich beschleunigt.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                        Voll- und Leergutfahrten, sauberes Disponieren und natürlich der Verkauf direkt vom LKW, runden das System professionell ab. Vor allem das Rückerfassen der Lieferungen im Büro entfallen komplett.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                        Lieferscheine und Rechnungen können über den mobilen Thermodrucker ausgegeben oder papierlos direkt per Mail zum Kunden geschickt werden. Die ebenfalls automatisch erstellten PDF Lieferscheine und Rechnungen werden wie von Zauberhand in Ihrem Dokumenten-Archiv abgelegt.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                        Aus Sicherheitsgründen sehen wir von Android Betriebssystemen ab. LieferMax kann mit drink.3000 und drink.PRO von COPA SYSTEME und bestimmt auch mit Ihrer Warenwirtschaft arbeiten, fragen Sie uns einfach.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed font-semibold">
+                        Diese App werden Ihre Mitarbeiter LIEBEN.
+                    </p>
+                    
+                    <div class="bg-red-50 rounded-2xl p-6 mb-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Hauptfunktionen</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">Digitale Lieferscheine & Rechnungen</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">Integrierte Navigation</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">Barcode-Scanner</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">Unterschriftenfunktion</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">E-Mail & Druck-Versand</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">DMS Archivierung</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">Offene Posten Verwaltung</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <span class="text-gray-700">Zeiterfassung</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 flex flex-col items-center">
+                        <img src="/assets/images/liefermax-screenshots/1.png" alt="LieferMax App Screenshot" class="w-1/2 rounded-2xl shadow-2xl cursor-pointer hover:scale-105 transition-transform" loading="lazy">
+                        <p class="text-gray-500 text-sm mt-4 text-center">Klicken Sie auf das Bild, um alle Screenshots zu sehen</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-gradient-to-br from-red-500 to-red-400 rounded-3xl p-8 text-white">
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 mb-6">
+                            <h3 class="text-2xl font-bold mb-4">Leistungsverzeichnis</h3>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Ladescheinnummer-basierte Auftragsöffnung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Kundenübersicht mit Druckfunktion</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Start-/Endkilometer Erfassung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Sortierte Absatzstätten aus Warenwirtschaft</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Maps-Navigation zur Absatzstätte</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Barkassierung offener Rechnungen</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Abladeliste (Vollgut) mit Barcodescanner</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Aufladeliste (Leergut/Vollgut)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Unterschriftspflicht (konfigurierbar)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Automatischer Tagesabschluss</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Lieferschein drucken/per E-Mail versenden</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Aufträge löschen mit Begründung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Endkilometerstand eingeben</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Tagesabschluss erstellen</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Leergutkennzeichnung drucken</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>W-LAN Übertragung an IIS WEB-Server</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 mb-6">
+                            <h3 class="text-2xl font-bold mb-4">Weitere Funktionen</h3>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Seriennummernverwaltung via Scanner (Kohlensäure)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Leer & Vollgut-Scan Funktion</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Verrechnung von Zu- und Abschlägen</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Kumuliertes Leergut je Kunde</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Listung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Zug um Zug</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Heimdienstabwicklung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Bargeldberechnung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Offene Postenverwaltung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Rechnung, Lieferschein & Quittung per E-Mail</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>DMS Archivierung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Bruch: Fotozwang & Archivierung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Kundennotizen für das Büro</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Bewertete Lieferscheine</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Neuer Auftrag über Bestandskundenliste</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Storno mit Grundangabe</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Zeiterfassung (Tourbeginn & Ende)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Barkunden Leergutverrechnung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Digitale Belegerstellung</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right mt-1 flex-shrink-0"></i>
+                                    <span>Lieferschein & Rechnungsnachdruck</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm opacity-80 mb-2">Kompatibel mit</div>
+                            <div class="font-bold text-lg mb-6">COPA drink.3000 & drink.PRO</div>
+                            <div class="flex justify-center">
+                                <img src="/assets/images/TSE-liefermax.png" alt="TSE Zertifiziert" class="h-24 w-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mt-16">
+                <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                    <img src="/assets/images/Auslieferung_fahrer_01.jpg" alt="Fahrer mit LieferMax App bei der Auslieferung" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <p class="text-white font-semibold text-lg">LieferMax im Einsatz</p>
+                        <p class="text-gray-200 text-sm">Professionelle Auslieferung mit digitaler Unterstützung</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                    <img src="/assets/images/Auslieferung_Beispiel_Foto.jpg" alt="Getränkeauslieferung mit LieferMax" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <p class="text-white font-semibold text-lg">Effiziente Getränkelogistik</p>
+                        <p class="text-gray-200 text-sm">Schnelle und zuverlässige Lieferung beim Kunden</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LieferMax-CHECK -->
+    <section id="check" class="py-24 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-8 text-white">
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4">So funktioniert's</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-8 h-8 bg-white bg-opacity-30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <span class="font-bold">1</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold mb-1">Tour laden</div>
+                                        <div class="text-sm opacity-90">Scannen der Ladescheinnummer oder händische Eingabe</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-8 h-8 bg-white bg-opacity-30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <span class="font-bold">2</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold mb-1">Artikel kontrollieren</div>
+                                        <div class="text-sm opacity-90">Einfaches Anklicken und Mengeneingabe</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-8 h-8 bg-white bg-opacity-30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <span class="font-bold">3</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold mb-1">Automatischer Abgleich</div>
+                                        <div class="text-sm opacity-90">Sofortige Differenzanzeige und Dokumentation</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                        LEERGUTKONTROLLE
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                        LieferMax-<span class="text-red-600">CHECK</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                        Mit LieferMax-CHECK wird die Leergutkontrolle zum Kinderspiel! Laden Sie Touren per Scan oder händischer Eingabe und kontrollieren Sie den Leergutbestand sekundenschnell.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-qrcode text-red-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Scannen oder Eingabe</div>
+                                <div class="text-gray-600">iPad-Kamera oder manuelle Ladescheinnummer-Eingabe</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-list-check text-red-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Intelligente Artikelliste</div>
+                                <div class="text-gray-600">Nur Artikel die auf der Tour sein müssten, ohne Mengenangabe</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chart-line text-red-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Sofortiger Abgleich</div>
+                                <div class="text-gray-600">Automatische Differenzberechnung und Dokumentation</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Screenshots</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <img src="/assets/images/lm-check_IMG_6060.png" alt="LM-CHECK Screenshot 1" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
+                            <img src="/assets/images/lm-check_IMG_6061.png" alt="LM-CHECK Screenshot 2" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
+                            <img src="/assets/images/lm-check_IMG_6062.png" alt="LM-CHECK Screenshot 3" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
+                            <img src="/assets/images/lm-check_IMG_6063.png" alt="LM-CHECK Screenshot 4" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
+                            <img src="/assets/images/lm-check_IMG_6064.png" alt="LM-CHECK Screenshot 5" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
+                            <img src="/assets/images/lm-check_IMG_6065.png" alt="LM-CHECK Screenshot 6" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-48 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LieferMax-MAP -->
+    <section id="map" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                        GPS-TRACKING
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                        LieferMax-<span class="text-red-600">MAP</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        LieferMax-MAP ist Ihr Routing-Tool, um alle Fahrzeuge über GPS-Ortung live zu verfolgen und den Lieferzustand in Echtzeit auszuwerten.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-red-50 rounded-xl p-6">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">Live GPS-Ortung</h3>
+                            <p class="text-gray-600 text-sm">Verfolgen Sie alle Fahrzeuge in Echtzeit auf einer Karte</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <div class="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-route text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">Tourenoptimierung</h3>
+                            <p class="text-gray-600 text-sm">Optimale Routenplanung für maximale Effizienz</p>
+                        </div>
+                        <div class="bg-red-50 rounded-xl p-6">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-chart-pie text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">Lieferstatus</h3>
+                            <p class="text-gray-600 text-sm">Auswertung des aktuellen Lieferzustands</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <div class="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-history text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">Historische Daten</h3>
+                            <p class="text-gray-600 text-sm">Analyse vergangener Touren und Optimierungspotenziale</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="space-y-4">
+                        <img src="/assets/images/lm-map_LieferMax-Map-Dashboard-1024x487.png" alt="LM-MAP Dashboard" class="rounded-xl shadow-2xl hover:scale-105 transition cursor-pointer w-full">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="/assets/images/lm-map_LieferMax-Map-1-1024x541.png" alt="LM-MAP Ansicht 1" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-64 object-cover">
+                            <img src="/assets/images/lm-map_LieferMax-Map-2-1024x731.png" alt="LM-MAP Ansicht 2" class="rounded-lg shadow-lg hover:scale-105 transition cursor-pointer w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop-Konverter -->
+    <section id="shop" class="py-24 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                    E-COMMERCE INTEGRATION
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Shop-<span class="text-red-600">Konverter</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Wir bieten moderne View-basierte Schnittstellen zwischen Ihrem Webshop und COPA Systeme drink.3000 & drink.PRO.
+                </p>
+                <div class="flex justify-center items-center gap-8 flex-wrap">
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <img src="/assets/images/shop-konverter_shopware.png" alt="ShopWare" class="h-12">
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <img src="/assets/images/shop-konverter_WordPress-1.png" alt="WooCommerce" class="h-12">
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md flex items-center">
+                        <img src="/assets/images/copa_systeme_logo.png" alt="COPA Systeme" class="h-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestell-Apps -->
+    <section id="apps" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block bg-pink-100 text-pink-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                        MOBILE APPS
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                        Bestell-<span class="text-pink-600">Apps</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Native iOS und Android Apps in Verbindung mit ShopWare und drink.3000 & drink.PRO von COPA SYSTEME.
+                    </p>
+                    
+                    <div class="flex gap-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="h-12">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-12">
+                    </div>
+                </div>
+                <div>
+                    <div class="space-y-4 mb-8">
+                        <img src="/assets/images/FZAPPNLetter-1024x763.png" alt="Bestell-App Hauptansicht" class="w-full rounded-2xl shadow-2xl cursor-pointer hover:scale-105 transition-transform" loading="lazy">
+                        <img src="/assets/images/Bildschirmfoto-2021-02-25-um-13.27.16.png" alt="Bestell-App Details" class="w-full rounded-xl shadow-lg cursor-pointer hover:scale-105 transition-transform" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kassen-Konverter -->
+    <section id="kasse" class="py-24 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
+                        KASSENANBINDUNG
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                        Kassen-<span class="text-cyan-600">Konverter</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Sie wollen Ihre Getränke-Markt-Kasse günstig mit COPA SYSTEME verbinden? Artikel und Umsätze synchron halten? Hier ist Ihre Lösung!
+                    </p>
+                    
+                    <a href="/contact" class="inline-flex items-center gap-2 bg-cyan-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-cyan-700 transition">
+                        Mehr erfahren <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div>
+                    <div class="bg-gradient-to-br from-cyan-500 to-teal-500 rounded-3xl p-8 text-white aspect-square flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-cash-register text-8xl mb-6 opacity-90"></i>
+                            <h3 class="text-3xl font-bold mb-4">Kasse & COPA</h3>
+                            <p class="text-lg opacity-90">Perfekt synchronisiert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-4 gradient-bg">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-black mb-6">
+                Bereit für die Digitalisierung?
+            </h2>
+            <p class="text-xl mb-8 text-gray-100">
+                Vereinbaren Sie jetzt eine kostenlose Demo und erleben Sie LieferMax in Aktion.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/contact" class="bg-white text-red-600 px-10 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition transform hover:scale-105 inline-block">
+                    <i class="fas fa-calendar-check mr-2"></i>Demo vereinbaren
+                </a>
+                <a href="/contact" class="bg-red-700 bg-opacity-50 backdrop-blur-sm text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-opacity-70 transition border-2 border-white border-opacity-30">
+                    <i class="fas fa-phone mr-2"></i>Jetzt anrufen
+                </a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

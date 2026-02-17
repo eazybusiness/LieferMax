@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: eazybusiness/LieferMax
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 # Lokale Entwicklung
 local_backend: true
