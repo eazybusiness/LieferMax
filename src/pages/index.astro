@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import { getEntry } from 'astro:content';
+
+const homeContent = await getEntry('pages', 'home');
+const { title, description, heroTitle, heroSubtitle, heroBadge } = homeContent.data;
+---
+
+<BaseLayout title={title} description={description}>
+    <Navigation />
+    
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            {heroBadge && (
+                <div class="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-full mb-6 border border-white border-opacity-30">
+                    <span class="text-white text-sm font-semibold">{heroBadge}</span>
+                </div>
+            )}
+            <h1 class="text-5xl md:text-6xl font-black mb-6" set:html={heroTitle}></h1>
+            {heroSubtitle && (
+                <p class="text-xl text-gray-100 max-w-3xl mx-auto mb-10">{heroSubtitle}</p>
+            )}
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/contact" class="bg-white text-red-600 px-10 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition transform hover:scale-105">
+                    <i class="fas fa-calendar-check mr-2"></i>Kostenlose Demo
+                </a>
+                <a href="tel:+4983679139187" class="bg-red-700 bg-opacity-50 backdrop-blur-sm text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-opacity-70 transition border-2 border-white border-opacity-30">
+                    <i class="fas fa-phone mr-2"></i>08367 – 91 39 187
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Warum <span class="gradient-text">LieferMax</span>?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Modernste Technologie für effiziente Getränkelogistik
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mobile First</h3>
+                    <p class="text-gray-600">
+                        Optimiert für iPad und iPhone. Ihre Fahrer haben alle Funktionen direkt auf dem Gerät.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-sync text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">COPA Integration</h3>
+                    <p class="text-gray-600">
+                        Nahtlose Integration mit drink.3000 und drink.PRO. Keine doppelte Datenpflege.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-invoice text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Papierlos</h3>
+                    <p class="text-gray-600">
+                        Digitale Lieferscheine und Rechnungen per E-Mail. Automatische DMS-Archivierung.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-4 gradient-bg relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+        </div>
+        <div class="max-w-5xl mx-auto text-center text-white relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black mb-6">
+                Bereit für die digitale Transformation?
+            </h2>
+            <p class="text-xl mb-10 text-gray-100 max-w-3xl mx-auto">
+                Vereinbaren Sie jetzt eine kostenlose Demo und erleben Sie, wie LieferMax Ihre Getränkelogistik revolutioniert.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/contact" class="bg-white text-red-600 px-10 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition transform hover:scale-105 inline-block">
+                    <i class="fas fa-calendar-check mr-2"></i>Kostenlose Demo
+                </a>
+                <a href="tel:+4983679139187" class="bg-red-700 bg-opacity-50 backdrop-blur-sm text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-opacity-70 transition border-2 border-white border-opacity-30">
+                    <i class="fas fa-phone mr-2"></i>08367 – 91 39 187
+                </a>
+            </div>
+            <div class="mt-12 pt-12 border-t border-white border-opacity-20">
+                <div class="flex flex-wrap justify-center items-center gap-8">
+                    <div class="text-center">
+                        <div class="text-sm text-gray-200 mb-2">Technologiepartner</div>
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-lg border border-white border-opacity-30">
+                            <div class="font-bold text-lg">COPA Systeme</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</BaseLayout>

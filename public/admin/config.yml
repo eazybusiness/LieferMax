@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Lokale Entwicklung
+local_backend: true
+
+# Media-Verwaltung
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+
+# Lokalisierung
+locale: "de"
+
+# Collections (Content-Typen)
+collections:
+  # Seiten
+  - name: "pages"
+    label: "Seiten"
+    folder: "src/content/pages"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung", name: "description", widget: "text"}
+      - {label: "Hero Titel", name: "heroTitle", widget: "string"}
+      - {label: "Hero Untertitel", name: "heroSubtitle", widget: "text", required: false}
+      - {label: "Hero Badge", name: "heroBadge", widget: "string", required: false}
+      - {label: "Inhalt", name: "body", widget: "markdown"}
+      
+  # Produkte
+  - name: "products"
+    label: "Produkte"
+    folder: "src/content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Produkt Name", name: "title", widget: "string"}
+      - {label: "Kurzbeschreibung", name: "excerpt", widget: "text"}
+      - {label: "Badge Text", name: "badge", widget: "string"}
+      - {label: "Badge Farbe", name: "badgeColor", widget: "select", options: ["red", "green", "blue", "purple", "orange"]}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Hauptbild", name: "image", widget: "image", required: false}
+      - {label: "Beschreibung", name: "body", widget: "markdown"}
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Feature", name: "text", widget: "string"}
+      - label: "Screenshots"
+        name: "screenshots"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Bild", name: "image", widget: "image"}
+          - {label: "Beschreibung", name: "alt", widget: "string"}
+          
+  # Globale Einstellungen
+  - name: "settings"
+    label: "Einstellungen"
+    files:
+      - label: "Site Einstellungen"
+        name: "site"
+        file: "src/content/settings/site.md"
+        fields:
+          - {label: "Site Titel", name: "title", widget: "string"}
+          - {label: "Site Beschreibung", name: "description", widget: "text"}
+          - {label: "Telefon", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Adresse", name: "address", widget: "text"}

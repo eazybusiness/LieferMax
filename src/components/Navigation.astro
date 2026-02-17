@@ -1,0 +1,55 @@
+---
+// Navigation component with current structure
+---
+
+<nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <a href="/">
+                        <div class="flex items-center space-x-3">
+                            <img src="/assets/images/logo.jpg" alt="LieferMax Logo" class="h-12 w-12 rounded-lg">
+                            <h1 class="text-3xl font-bold text-gray-800">LieferMax</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-center space-x-8">
+                    <a href="/" class="text-gray-600 hover:text-red-600 font-medium transition">Home</a>
+                    <a href="/products#liefermax" class="text-gray-600 hover:text-red-600 font-medium transition">LieferMax</a>
+                    <a href="/products#check" class="text-gray-600 hover:text-red-600 font-medium transition">LM-CHECK</a>
+                    <a href="/products#map" class="text-gray-600 hover:text-red-600 font-medium transition">LM-MAP</a>
+                    <a href="/products#shop" class="text-gray-600 hover:text-red-600 font-medium transition">ShopWare & WooCommerce</a>
+                    <a href="/products#apps" class="text-gray-600 hover:text-red-600 font-medium transition">Bestell App</a>
+                    <a href="https://apps.apple.com/de/app/liefermax/id1349464950" target="_blank" class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                        App testen
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-red-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 py-4">
+            <div class="flex flex-col space-y-4 px-4">
+                <a href="/" class="text-gray-600 hover:text-red-600 font-medium transition py-2">Home</a>
+                <a href="/products#liefermax" class="text-gray-600 hover:text-red-600 font-medium transition py-2">LieferMax</a>
+                <a href="/products#check" class="text-gray-600 hover:text-red-600 font-medium transition py-2">LM-CHECK</a>
+                <a href="/products#map" class="text-gray-600 hover:text-red-600 font-medium transition py-2">LM-MAP</a>
+                <a href="/products#shop" class="text-gray-600 hover:text-red-600 font-medium transition py-2">ShopWare & WooCommerce</a>
+                <a href="/products#apps" class="text-gray-600 hover:text-red-600 font-medium transition py-2">Bestell App</a>
+                <a href="https://apps.apple.com/de/app/liefermax/id1349464950" target="_blank" class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold text-center hover:shadow-lg transition">App testen</a>
+            </div>
+        </div>
+    </div>
+</nav>

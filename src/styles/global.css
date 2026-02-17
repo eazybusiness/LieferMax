@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Custom CSS Variables */
+:root {
+    --primary-red: #D32F2F;
+    --primary-gray: #333333;
+    --secondary-gray: #666666;
+    --light-bg: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+/* Font Family */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Gradient Background */
+.gradient-bg {
+    background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card Hover Effect */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Input Focus */
+.input-focus:focus {
+    outline: none;
+    border-color: #D32F2F;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
