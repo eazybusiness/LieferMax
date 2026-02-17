@@ -36,8 +36,8 @@ add_action('after_setup_theme', 'liefermax_setup');
  * Enqueue Scripts and Styles
  */
 function liefermax_enqueue_scripts() {
-    // TailwindCSS CDN
-    wp_enqueue_style('tailwindcss', 'https://cdn.tailwindcss.com', array(), null);
+    // TailwindCSS CDN - Load as script for proper initialization
+    wp_enqueue_script('tailwindcss', 'https://cdn.tailwindcss.com', array(), null, false);
     
     // Font Awesome
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');

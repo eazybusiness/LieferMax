@@ -5,6 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
     
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        :root {
+            --primary-red: #D32F2F;
+            --primary-gray: #333333;
+            --secondary-gray: #666666;
+            --light-bg: #F5F5F5;
+            --border: #E0E0E0;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #D32F2F 0%, #E57373 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-bg-alt {
+            background: linear-gradient(135deg, #333333 0%, #666666 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hero-pattern {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+            position: relative;
+        }
+        
+        .hero-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 1;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+    
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
@@ -45,11 +116,7 @@
         <div class="flex justify-between items-center h-20">
             <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center space-x-3">
-                    <?php if (has_custom_logo()) : ?>
-                        <?php the_custom_logo(); ?>
-                    <?php else : ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.jpg" alt="LieferMax Logo" class="h-12 w-12 rounded-lg">
-                    <?php endif; ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/liefermax-logo.png" alt="LieferMax Logo" class="h-16 w-auto">
                     <h1 class="text-3xl font-bold text-gray-800">
                         <a href="<?php echo home_url(); ?>" class="text-gray-800 hover:text-red-600 transition">
                             <?php bloginfo('name'); ?>

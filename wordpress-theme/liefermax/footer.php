@@ -4,7 +4,7 @@
             <div class="grid md:grid-cols-4 gap-12">
                 <div>
                     <div class="flex items-center space-x-3 mb-6">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.jpg" alt="LieferMax Logo" class="h-12 w-12 rounded-lg">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/llt="jLeferMax Logo" class="h-12 w-12 rou2ded12 rolnded-lg>
                         <h3 class="text-2xl font-bold"><?php bloginfo('name'); ?></h3>
                     </div>
                     <p class="text-gray-300 leading-relaxed">
@@ -15,22 +15,22 @@
                 <div>
                     <h4 class="text-lg font-bold mb-4">Produkte</h4>
                     <ul class="space-y-3">
-                        <li><a href="<?php echo home_url('/products#liefermax'); ?>" class="text-gray-300 hover:text-white transition">LieferMax App</a></li>
-                        <li><a href="<?php echo home_url('/products#check'); ?>" class="text-gray-300 hover:text-white transition">LM-CHECK</a></li>
-                        <li><a href="<?php echo home_url('/products#map'); ?>" class="text-gray-300 hover:text-white transition">LM-MAP</a></li>
-                        <li><a href="<?php echo home_url('/products#shop'); ?>" class="text-gray-300 hover:text-white transition">Shop-Konverter</a></li>
-                        <li><a href="<?php echo home_url('/products#apps'); ?>" class="text-gray-300 hover:text-white transition">Bestell-Apps</a></li>
+                        <li><a href="<?php echo home_url('/products/'); ?>#liefermax" class="text-gray-300 hover:text-white transition">LieferMax App</a></li>
+                        <li><a href="<?php echo home_url('/products/'); ?>#check" class="text-gray-300 hover:text-white transition">LM-CHECK</a></li>
+                        <li><a href="<?php echo home_url('/products/'); ?>#map" class="text-gray-300 hover:text-white transition">LM-MAP</a></li>
+                        <li><a href="<?php echo home_url('/products/'); ?>#shop" class="text-gray-300 hover:text-white transition">Shop-Konverter</a></li>
+                        <li><a href="<?php echo home_url('/products/'); ?>#apps" class="text-gray-300 hover:text-white transition">Bestell-Apps</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-bold mb-4">Unternehmen</h4>
                     <ul class="space-y-3">
-                        <li><a href="<?php echo home_url('/integration'); ?>" class="text-gray-300 hover:text-white transition">COPA Integration</a></li>
-                        <li><a href="<?php echo home_url('/contact'); ?>" class="text-gray-300 hover:text-white transition">Kontakt</a></li>
-                        <li><a href="<?php echo home_url('/impressum'); ?>" class="text-gray-300 hover:text-white transition">Impressum</a></li>
-                        <li><a href="<?php echo home_url('/datenschutz'); ?>" class="text-gray-300 hover:text-white transition">Datenschutz</a></li>
-                        <li><a href="<?php echo home_url('/agb'); ?>" class="text-gray-300 hover:text-white transition">AGB</a></li>
+                        <li><a href="<?php echo home_url('/integration/'); ?>" class="text-gray-300 hover:text-white transition">COPA Integration</a></li>
+                        <li><a href="<?php echo home_url('/contact/'); ?>" class="text-gray-300 hover:text-white transition">Kontakt</a></li>
+                        <li><a href="<?php echo home_url('/impressum/'); ?>" class="text-gray-300 hover:text-white transition">Impressum</a></li>
+                        <li><a href="<?php echo home_url('/datenschutz/'); ?>" class="text-gray-300 hover:text-white transition">Datenschutz</a></li>
+                        <li><a href="<?php echo home_url('/agb/'); ?>" class="text-gray-300 hover:text-white transition">AGB</a></li>
                     </ul>
                 </div>
                 
@@ -54,6 +54,34 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4" onclick="closeImageModal()">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white text-4xl hover:text-red-400 transition">&times;</button>
+            <img id="modalImage" src="" alt="Screenshot" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl">
+        </div>
+    </div>
+
+    <script>
+        function openImageModal(imageSrc) {
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.getElementById('modalImage').src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+    </script>
 
     <?php wp_footer(); ?>
 </body>

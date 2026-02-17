@@ -24,11 +24,11 @@ function liefermax_default_menu() {
 function liefermax_default_menu_mobile() {
     $menu_items = array(
         array('url' => home_url('/'), 'title' => 'Home'),
-        array('url' => home_url('/products#liefermax'), 'title' => 'LieferMax'),
-        array('url' => home_url('/products#check'), 'title' => 'LM-CHECK'),
-        array('url' => home_url('/products#map'), 'title' => 'LM-MAP'),
-        array('url' => home_url('/products#shop'), 'title' => 'ShopWare & WooCommerce'),
-        array('url' => home_url('/products#apps'), 'title' => 'Bestell App'),
+        array('url' => home_url('/products/'), 'title' => 'Produkte'),
+        array('url' => home_url('/integration/'), 'title' => 'Integration'),
+        array('url' => home_url('/contact/'), 'title' => 'Kontakt'),
+        array('url' => home_url('/weitere-tools/'), 'title' => 'Weitere Tools'),
+        array('url' => home_url('/impressum/'), 'title' => 'Impressum'),
     );
     
     foreach ($menu_items as $item) {
