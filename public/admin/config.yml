@@ -26,6 +26,42 @@ collections:
       - {label: "Hero Titel", name: "heroTitle", widget: "string"}
       - {label: "Hero Untertitel", name: "heroSubtitle", widget: "text", required: false}
       - {label: "Hero Badge", name: "heroBadge", widget: "string", required: false}
+      - label: "Hero Statistiken"
+        name: "heroStats"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Wert", name: "value", widget: "string"}
+          - {label: "Label", name: "label", widget: "string"}
+      - label: "Screenshots"
+        name: "screenshots"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Bild", name: "image", widget: "image"}
+          - {label: "Alt Text", name: "alt", widget: "string"}
+      - label: "Produkte"
+        name: "products"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Icon", name: "icon", widget: "image"}
+          - {label: "Beschreibung", name: "description", widget: "text"}
+          - {label: "Link", name: "link", widget: "string"}
+      - label: "COPA Integration"
+        name: "copaIntegration"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Beschreibung", name: "description", widget: "text"}
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "text"}
       - {label: "Inhalt", name: "body", widget: "markdown"}
       
   # Produkte
