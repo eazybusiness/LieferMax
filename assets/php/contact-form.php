@@ -19,6 +19,7 @@ session_start();
 define('RECIPIENT_EMAIL', 'info@hiplus.de');
 define('SUBJECT_PREFIX', '[LieferMax Kontakt] ');
 define('RATE_LIMIT_SECONDS', 60); // 1 minute between submissions
+define('MAIL_FROM_EMAIL', 'kontakt@liefermax.com');
 
 define('LOG_FILE_PATH', __DIR__ . '/contact-form.log');
 
@@ -43,6 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode(['success' => false, 'message' => 'Methode nicht erlaubt.']);
     exit;
 }
+
+$requestId = null;
+try {
+    $requestId = bin2hex(random_bytes(8));
+} catch (Exception $e) {
+    $requestId = (string) time();
+}
+
+writeLog('request_received', ['request_id' => $requestId]);
 
 /**
  * Rate limiting check
@@ -179,16 +189,23 @@ $emailBody .= "IP-Adresse: " . $_SERVER['REMOTE_ADDR'] . "\n";
 // Email headers - Strato-compatible
 // Note: Strato requires From address to be from the same domain
 $headers = [];
-$headers[] = 'From: kontakt@liefermax.com';
+$headers[] = 'From: ' . MAIL_FROM_EMAIL;
 $headers[] = 'Reply-To: ' . $email;
 $headers[] = 'X-Mailer: PHP/' . phpversion();
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 
 // Send email
-$mailSent = mail(RECIPIENT_EMAIL, $subject, $emailBody, implode("\r\n", $headers));
+$mailSent = mail(
+    RECIPIENT_EMAIL,
+    $subject,
+    $emailBody,
+    implode("\r\n", $headers),
+    '-f ' . MAIL_FROM_EMAIL
+);
+$lastError = error_get_last();
 
 if ($mailSent) {
-    writeLog('mail_sent', ['to' => RECIPIENT_EMAIL, 'subject' => $subject]);
+    writeLog('mail_sent', ['to' => RECIPIENT_EMAIL, 'subject' => $subject, 'request_id' => $requestId, 'last_error' => $lastError]);
     // Update rate limit timestamp
     $_SESSION['last_submission'] = time();
     
@@ -196,10 +213,11 @@ if ($mailSent) {
     http_response_code(200);
     echo json_encode([
         'success' => true,
-        'message' => 'Vielen Dank für Ihre Nachricht! Wir werden uns schnellstmöglich bei Ihnen melden.'
+        'message' => 'Vielen Dank für Ihre Nachricht! Wir werden uns schnellstmöglich bei Ihnen melden.',
+        'request_id' => $requestId
     ]);
 } else {
-    writeLog('mail_failed', ['to' => RECIPIENT_EMAIL, 'subject' => $subject]);
+    writeLog('mail_failed', ['to' => RECIPIENT_EMAIL, 'subject' => $subject, 'request_id' => $requestId, 'last_error' => $lastError]);
     // Error sending email
     http_response_code(500);
     echo json_encode([

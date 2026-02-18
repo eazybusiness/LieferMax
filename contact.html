@@ -449,7 +449,9 @@
                     }
 
                     if (payload && payload.success) {
-                        setStatus('success', payload.message || 'Vielen Dank!');
+                        const msg = payload.message || 'Vielen Dank!';
+                        const requestId = payload.request_id ? (' (ID: ' + payload.request_id + ')') : '';
+                        setStatus('success', msg + requestId);
                         form.reset();
                         if (nameField) {
                             nameField.value = '';
