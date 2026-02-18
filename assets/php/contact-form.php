@@ -16,15 +16,29 @@
 session_start();
 
 // Configuration
-define('RECIPIENT_EMAIL', 'info@liefermax.com');
+define('RECIPIENT_EMAIL', 'info@hiplus.de');
 define('SUBJECT_PREFIX', '[LieferMax Kontakt] ');
 define('RATE_LIMIT_SECONDS', 60); // 1 minute between submissions
+
+define('LOG_FILE_PATH', __DIR__ . '/contact-form.log');
 
 // Response headers
 header('Content-Type: application/json; charset=utf-8');
 
+function writeLog($event, $data = []) {
+    $payload = [
+        'ts' => date('c'),
+        'event' => $event,
+        'ip' => isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : null,
+        'data' => $data,
+    ];
+
+    error_log(json_encode($payload, JSON_UNESCAPED_UNICODE) . "\n", 3, LOG_FILE_PATH);
+}
+
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    writeLog('method_not_allowed', ['method' => isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : null]);
     http_response_code(405);
     echo json_encode(['success' => false, 'message' => 'Methode nicht erlaubt.']);
     exit;
@@ -88,6 +102,7 @@ function validateFields($data) {
 
 // Check rate limit
 if (!checkRateLimit()) {
+    writeLog('rate_limited');
     http_response_code(429);
     echo json_encode([
         'success' => false, 
@@ -101,6 +116,7 @@ $name = isset($_POST['name']) ? sanitizeInput($_POST['name']) : '';
 $email = isset($_POST['email']) ? sanitizeInput($_POST['email']) : '';
 $phone = isset($_POST['phone']) ? sanitizeInput($_POST['phone']) : '';
 $company = isset($_POST['company']) ? sanitizeInput($_POST['company']) : '';
+$subjectFromForm = isset($_POST['subject']) ? sanitizeInput($_POST['subject']) : '';
 $message = isset($_POST['message']) ? sanitizeInput($_POST['message']) : '';
 
 // Honeypot field (should be empty)
@@ -108,6 +124,7 @@ $honeypot = isset($_POST['website']) ? $_POST['website'] : '';
 
 // Check honeypot
 if (!empty($honeypot)) {
+    writeLog('honeypot_triggered');
     // Spam detected - pretend success but don't send email
     http_response_code(200);
     echo json_encode([
@@ -125,6 +142,7 @@ $errors = validateFields([
 ]);
 
 if (!empty($errors)) {
+    writeLog('validation_failed', ['errors' => $errors]);
     http_response_code(400);
     echo json_encode([
         'success' => false,
@@ -135,13 +153,17 @@ if (!empty($errors)) {
 }
 
 // Prepare email
-$subject = SUBJECT_PREFIX . 'Neue Kontaktanfrage von ' . $name;
+$subjectSuffix = !empty($subjectFromForm) ? (' - ' . $subjectFromForm) : '';
+$subject = SUBJECT_PREFIX . 'Neue Kontaktanfrage von ' . $name . $subjectSuffix;
 
 // Email body
 $emailBody = "Neue Kontaktanfrage über liefermax.com\n\n";
 $emailBody .= "----------------------------------------\n";
 $emailBody .= "Name: " . $name . "\n";
 $emailBody .= "E-Mail: " . $email . "\n";
+if (!empty($subjectFromForm)) {
+    $emailBody .= "Betreff: " . $subjectFromForm . "\n";
+}
 if (!empty($phone)) {
     $emailBody .= "Telefon: " . $phone . "\n";
 }
@@ -166,6 +188,7 @@ $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 $mailSent = mail(RECIPIENT_EMAIL, $subject, $emailBody, implode("\r\n", $headers));
 
 if ($mailSent) {
+    writeLog('mail_sent', ['to' => RECIPIENT_EMAIL, 'subject' => $subject]);
     // Update rate limit timestamp
     $_SESSION['last_submission'] = time();
     
@@ -176,6 +199,7 @@ if ($mailSent) {
         'message' => 'Vielen Dank für Ihre Nachricht! Wir werden uns schnellstmöglich bei Ihnen melden.'
     ]);
 } else {
+    writeLog('mail_failed', ['to' => RECIPIENT_EMAIL, 'subject' => $subject]);
     // Error sending email
     http_response_code(500);
     echo json_encode([
