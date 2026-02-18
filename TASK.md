@@ -1,34 +1,37 @@
 # TASK.md
 
-## LieferMax Website Redesign - Task Tracking
+## LieferMax Website - WordPress Template Migration
 
 **Last Updated**: February 17, 2026  
-**Current Sprint**: Phase 3 - CMS Migration (Astro + Decap CMS)
+**Current Strategy**: WordPress Theme Development (1:1 Design Match)
+**Deployment Target**: Strato WordPress
 
 ---
 
-## 🎯 Current Sprint Goals (Phase 2)
+## 🎯 Current Sprint Goals
 
-1. **CMS-Migration**: Astro + Decap CMS für Kunden-Editierung
-2. **Content-Completion**: Alle fehlenden Inhalte von Original-Website übernehmen
-3. **Branding**: Logo integrieren, Farben aus Logo ableiten
-4. **Design**: Wärmeres, persönlicheres Design (weniger Blau)
-5. **Bilder**: Alle Original-Screenshots und Produktbilder einbauen
+1. **WordPress Theme Development**: Convert static HTML to WordPress templates
+2. **1:1 Design Match**: Pixel-perfect match with existing static site
+3. **Minimal Manual Work**: Automate content migration with ACF
+4. **Local Testing**: Full WordPress setup and testing before export
+5. **Strato Deployment**: Export package ready for client's Strato hosting
 
 ---
 
 ## ✅ Completed Tasks
 
+### Strategy Pivot (Feb 17, 2026)
+- [x] Analyzed deployment options (Netlify, Strato, WordPress)
+- [x] Decided on WordPress template solution for Strato
+- [x] Pulled static HTML files from GitHub main branch
+- [x] Created WP-TEMPLATE-PLAN.md with complete architecture
+- [x] Updated TASK.md for WordPress workflow
+
 ### Project Setup
 - [x] Initial project structure created (Jan 15, 2026)
 - [x] Scraped original liefermax.com content (Jan 15, 2026)
-- [x] Created `.gitignore` file (Jan 15, 2026)
 - [x] Git repository initialized (Jan 15, 2026)
-- [x] Initial README.md created (Jan 15, 2026)
-- [x] BID.md for freelancer.de created (Jan 15, 2026)
-- [x] CONTRIBUTING.md created (Jan 15, 2026)
-- [x] DEPLOYMENT.md created (Jan 15, 2026)
-- [x] PROJECT_STRUCTURE.md created (Jan 15, 2026)
+- [x] All documentation created (README, PLANNING, etc.)
 
 ### Homepage Development
 - [x] Homepage (`index.html`) complete redesign (Jan 15, 2026)
@@ -50,19 +53,22 @@
 
 ## 🔄 In Progress
 
-### 🚨 PHASE 3: CMS Migration (Feb 17, 2026)
+### 🚨 PHASE 1: WordPress Theme Development (Feb 17, 2026)
 
-#### Status:
-- ✅ Astro-Projekt initialisiert
-- ✅ Decap CMS konfiguriert
-- ✅ Komponenten-Struktur erstellt
-- ✅ Content Collections Schema definiert
-- ✅ Hosting-Analyse: Strato + GitHub Actions SFTP ist perfekt
-- ✅ **GitHub OAuth Backend konfiguriert** (Feb 17, 2026)
-  - ✅ Decap CMS config.yml auf GitHub OAuth umgestellt
-  - ✅ Backend: github mit repo eazybusiness/LieferMax
-  - ✅ Netlify OAuth Gateway vorbereitet
-- ✅ **Seiten-Migration ABGESCHLOSSEN (7/7 Seiten)** - Feb 17, 2026
+#### Current Tasks:
+- [x] Static HTML files pulled from GitHub main branch
+- [ ] **Analyze HTML structure** (Navigation, Sections, Components)
+- [ ] **Create WordPress theme structure**
+  - [ ] style.css (theme header)
+  - [ ] functions.php (theme functions)
+  - [ ] header.php (navigation)
+  - [ ] footer.php (footer)
+  - [ ] Page templates for all 8 pages
+- [ ] **Set up local WordPress** (Docker or XAMPP)
+- [ ] **Install and configure ACF** (Advanced Custom Fields)
+- [ ] **Migrate content to WordPress**
+- [ ] **Test 1:1 design match**
+- [ ] **Create export package for Strato**
   - ✅ index.html → index.astro (11 Bilder)
     - ✅ home.md Content-Datei erstellt
     - ✅ Alle 11 Bilder kopiert und verifiziert

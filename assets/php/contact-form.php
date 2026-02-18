@@ -154,9 +154,10 @@ $emailBody .= "----------------------------------------\n";
 $emailBody .= "Gesendet am: " . date('d.m.Y H:i:s') . "\n";
 $emailBody .= "IP-Adresse: " . $_SERVER['REMOTE_ADDR'] . "\n";
 
-// Email headers
+// Email headers - Strato-compatible
+// Note: Strato requires From address to be from the same domain
 $headers = [];
-$headers[] = 'From: noreply@liefermax.com';
+$headers[] = 'From: kontakt@liefermax.com';
 $headers[] = 'Reply-To: ' . $email;
 $headers[] = 'X-Mailer: PHP/' . phpversion();
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
