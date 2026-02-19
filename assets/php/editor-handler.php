@@ -3,6 +3,7 @@
  * LieferMax Content Editor Handler
  * 
  * Handles:
+ * - Login/Logout authentication
  * - Loading page content
  * - Saving page content
  * - Image upload/management
@@ -14,6 +15,10 @@ define('UPLOAD_DIR', __DIR__ . '/../images/user-uploads/');
 define('ALLOWED_EXTENSIONS', ['jpg', 'jpeg', 'png', 'gif', 'webp']);
 define('MAX_FILE_SIZE', 2 * 1024 * 1024); // 2MB
 define('PAGES_DIR', __DIR__ . '/../../');
+define('EDITOR_PASSWORD', 'LieferMax2026!'); // CHANGE THIS PASSWORD!
+
+// Start session for login management
+session_start();
 
 // Response headers
 header('Content-Type: application/json; charset=utf-8');
@@ -35,6 +40,18 @@ if (!file_exists(UPLOAD_DIR)) {
 
 // Handle different actions
 switch ($action) {
+    case 'login':
+        handleLogin();
+        break;
+        
+    case 'logout':
+        handleLogout();
+        break;
+        
+    case 'check-login':
+        handleCheckLogin();
+        break;
+        
     case 'load':
         handleLoad();
         break;
@@ -62,9 +79,82 @@ switch ($action) {
 }
 
 /**
+ * Handle login
+ */
+function handleLogin() {
+    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    
+    if (empty($password)) {
+        echo json_encode(['success' => false, 'message' => 'Passwort erforderlich.']);
+        return;
+    }
+    
+    // Verify password
+    if ($password === EDITOR_PASSWORD) {
+        $_SESSION['editor_logged_in'] = true;
+        $_SESSION['editor_login_time'] = time();
+        echo json_encode(['success' => true, 'message' => 'Anmeldung erfolgreich.']);
+    } else {
+        echo json_encode(['success' => false, 'message' => 'Falsches Passwort.']);
+    }
+}
+
+/**
+ * Handle logout
+ */
+function handleLogout() {
+    unset($_SESSION['editor_logged_in']);
+    unset($_SESSION['editor_login_time']);
+    session_destroy();
+    echo json_encode(['success' => true, 'message' => 'Abmeldung erfolgreich.']);
+}
+
+/**
+ * Check login status
+ */
+function handleCheckLogin() {
+    $isLoggedIn = isset($_SESSION['editor_logged_in']) && $_SESSION['editor_logged_in'] === true;
+    
+    // Check session timeout (2 hours)
+    if ($isLoggedIn && isset($_SESSION['editor_login_time'])) {
+        $sessionAge = time() - $_SESSION['editor_login_time'];
+        if ($sessionAge > 2 * 60 * 60) { // 2 hours
+            handleLogout();
+            $isLoggedIn = false;
+        }
+    }
+    
+    echo json_encode(['logged_in' => $isLoggedIn]);
+}
+
+/**
+ * Check if user is logged in
+ */
+function requireLogin() {
+    $isLoggedIn = isset($_SESSION['editor_logged_in']) && $_SESSION['editor_logged_in'] === true;
+    
+    // Check session timeout
+    if ($isLoggedIn && isset($_SESSION['editor_login_time'])) {
+        $sessionAge = time() - $_SESSION['editor_login_time'];
+        if ($sessionAge > 2 * 60 * 60) { // 2 hours
+            handleLogout();
+            $isLoggedIn = false;
+        }
+    }
+    
+    if (!$isLoggedIn) {
+        http_response_code(401);
+        echo json_encode(['success' => false, 'message' => 'Nicht angemeldet.']);
+        exit;
+    }
+}
+
+/**
  * Load page content
  */
 function handleLoad() {
+    requireLogin(); // Require authentication
+    
     $page = isset($_GET['page']) ? $_GET['page'] : '';
     
     if (empty($page)) {
@@ -99,6 +189,8 @@ function handleLoad() {
  * Save page content
  */
 function handleSave() {
+    requireLogin(); // Require authentication
+    
     $page = isset($_POST['page']) ? $_POST['page'] : '';
     $content = isset($_POST['content']) ? $_POST['content'] : '';
     
@@ -139,6 +231,8 @@ function handleSave() {
  * Handle image upload
  */
 function handleUpload() {
+    requireLogin(); // Require authentication
+    
     if (!isset($_FILES['image'])) {
         echo json_encode(['success' => false, 'message' => 'Keine Datei hochgeladen.']);
         return;
@@ -195,6 +289,8 @@ function handleUpload() {
  * List uploaded images
  */
 function handleListImages() {
+    requireLogin(); // Require authentication
+    
     $images = [];
     
     if (is_dir(UPLOAD_DIR)) {
@@ -217,6 +313,8 @@ function handleListImages() {
  * Delete image
  */
 function handleDeleteImage() {
+    requireLogin(); // Require authentication
+    
     $image = isset($_POST['image']) ? $_POST['image'] : '';
     
     if (empty($image)) {

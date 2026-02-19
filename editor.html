@@ -17,6 +17,41 @@
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
+    <!-- Login Screen -->
+    <div id="login-screen" class="min-h-screen flex items-center justify-center bg-gray-50">
+        <div class="max-w-md w-full space-y-8 p-8">
+            <div class="text-center">
+                <i class="fas fa-edit text-red-600 text-4xl mb-4"></i>
+                <h1 class="text-3xl font-bold text-gray-900">LieferMax Editor</h1>
+                <p class="mt-2 text-gray-600">Bitte melden Sie sich an, um Inhalte zu bearbeiten</p>
+            </div>
+            
+            <form id="login-form" class="mt-8 space-y-6">
+                <div class="space-y-4">
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">Passwort</label>
+                        <input type="password" id="password" name="password" required
+                               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                               placeholder="Passwort eingeben">
+                    </div>
+                </div>
+                
+                <div>
+                    <button type="submit" id="login-btn" 
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Anmelden
+                    </button>
+                </div>
+                
+                <div id="login-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                    <p class="text-sm text-red-800"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Editor Screen (hidden until login) -->
+    <div id="editor-screen" class="hidden">
     <!-- Header -->
     <header class="bg-white shadow-sm border-b">
         <div class="max-w-7xl mx-auto px-4 py-4">
@@ -25,8 +60,11 @@
                     <i class="fas fa-edit text-red-600 text-2xl"></i>
                     <h1 class="text-2xl font-bold text-gray-900">LieferMax Inhalts-Editor</h1>
                 </div>
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
                     <span id="status" class="text-sm text-gray-500">Bereit</span>
+                    <button id="logout-btn" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-lg hover:bg-gray-100 transition">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Abmelden
+                    </button>
                     <button id="save-btn" class="bg-red-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-700 transition">
                         <i class="fas fa-save mr-2"></i>Speichern
                     </button>
@@ -89,11 +127,106 @@
             </div>
         </div>
     </main>
-
+    </div>
+    
     <!-- Success/Error Messages -->
     <div id="message" class="hidden fixed bottom-4 right-4 max-w-md p-4 rounded-lg shadow-lg"></div>
 
     <script>
+        // Login functionality
+        const loginScreen = document.getElementById('login-screen');
+        const editorScreen = document.getElementById('editor-screen');
+        const loginForm = document.getElementById('login-form');
+        const loginBtn = document.getElementById('login-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const loginError = document.getElementById('login-error');
+        
+        // Check if already logged in
+        checkLoginStatus();
+        
+        function checkLoginStatus() {
+            fetch('assets/php/editor-handler.php?action=check-login')
+                .then(response => response.json())
+                .then(result => {
+                    if (result.logged_in) {
+                        showEditor();
+                    } else {
+                        showLogin();
+                    }
+                })
+                .catch(error => {
+                    showLogin();
+                });
+        }
+        
+        function showLogin() {
+            loginScreen.classList.remove('hidden');
+            editorScreen.classList.add('hidden');
+        }
+        
+        function showEditor() {
+            loginScreen.classList.add('hidden');
+            editorScreen.classList.remove('hidden');
+            loadImages(); // Load images when editor is shown
+        }
+        
+        // Login form submission
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            loginBtn.disabled = true;
+            loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Anmelden...';
+            
+            const formData = new FormData();
+            formData.append('action', 'login');
+            formData.append('password', password);
+            
+            fetch('assets/php/editor-handler.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    showEditor();
+                    showMessage('Erfolgreich angemeldet', 'success');
+                } else {
+                    showLoginError(result.message || 'Anmeldung fehlgeschlagen');
+                }
+            })
+            .catch(error => {
+                showLoginError('Netzwerkfehler bei der Anmeldung');
+            })
+            .finally(() => {
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = '<i class="fas fa-sign-in-alt mr-2"></i>Anmelden';
+            });
+        });
+        
+        // Logout
+        logoutBtn.addEventListener('click', function() {
+            fetch('assets/php/editor-handler.php?action=logout', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(result => {
+                showLogin();
+                showMessage('Erfolgreich abgemeldet', 'success');
+            })
+            .catch(error => {
+                showLogin();
+            });
+        });
+        
+        function showLoginError(message) {
+            loginError.classList.remove('hidden');
+            loginError.querySelector('p').textContent = message;
+            setTimeout(() => {
+                loginError.classList.add('hidden');
+            }, 5000);
+        }
+        
         // TinyMCE Configuration
         tinymce.init({
             selector: '#content-editor',
